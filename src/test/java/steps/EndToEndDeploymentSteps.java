@@ -63,6 +63,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 		// Thread.sleep(10000);
 		String homePageTitle = base.driver.getTitle();
 		assertEquals("Home page loading... | ServiceNow", homePageTitle);
+		logger.info("Display Homepage ");
 
 	}
 
@@ -72,7 +73,8 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 		WebElement searchFilter = Abstract.waitUntilConditionSatisfy(base, FilterNavigation.searchFilter());
 		searchFilter.clear();
 		searchFilter.sendKeys(searchFilterValue);
-		Thread.sleep(10000);
+		logger.info("Enter value in filter navigation");
+//		Thread.sleep(10000);
 
 	}
 

@@ -171,28 +171,28 @@ public class Reporter {
         return ExtentCucumberFormatter.scenarioThreadLocal.get();
     }
     
+    
     public static int takescreenshot() throws IOException, AWTException {
-   	 Robot robot = new Robot();
-   	 counter = counter+1;
-   	 Rectangle screenRect = new Rectangle(Toolkit.getDefaultToolkit().getScreenSize());
-   	 BufferedImage screenFullImage = robot.createScreenCapture(screenRect);
-   	 ImageIO.write(screenFullImage, "JPG", new File(System.getProperty("user.dir") + "/Screenshots/" + folderName +"/FailedScreenshot"+counter+".jpg"));
-   	 return counter;
-   	
-   }
-   
- 
+      	 Robot robot = new Robot();
+      	 counter = counter+1;
+         	 Rectangle screenRect = new Rectangle(Toolkit.getDefaultToolkit().getScreenSize());
+      	 BufferedImage screenFullImage = robot.createScreenCapture(screenRect);
+      	 ImageIO.write(screenFullImage, "jpg", new File(System.getProperty("user.dir") + "\\ExtentReport\\" + folderName +"\\Screenshot"+counter+".jpg"));
+      	 return counter;
+      	
+      }
+      
+    
 
-	public static String createFolder() {
-		folderName = dateFormat.format(date);
-	   	folderName = folderName.replace(":", "_");
-	   	String PATH = System.getProperty("user.dir")+ "/Screenshots/";
-	   	File directory = new File(PATH+"//"+folderName);
-	   	if(!directory.exists()){
-	   		directory.mkdir();
-	   	}
-	   	return folderName;
-	}
-	
+   	public static String createFolder() {
+   		folderName = dateFormat.format(date);
+   	   	folderName = "Run_"+folderName.replace(":", "_");
+   	   	String PATH = "Screenshots/";
+   	   	File directory = new File(PATH+"//"+folderName);
+   	   	if(!directory.exists()){
+   	   		directory.mkdir();
+   	   	}
+   	   	return folderName;
+   	}
 	
 }

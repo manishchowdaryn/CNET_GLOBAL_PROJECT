@@ -161,9 +161,7 @@ public class Abstract extends BaseUtil {
 
 		folderName = Reporter.createFolder();
 		int i = Reporter.takescreenshot();
-		Reporter.addScreenCaptureFromPath(
-				System.getProperty("user.dir") + "/Screenshots/" + folderName + "/FailedScreenshot" + i + ".jpg", "CNET URL");
-
+		Reporter.addScreenCaptureFromPath("./Screenshot" + i + ".jpg");
 	}
 
 }
