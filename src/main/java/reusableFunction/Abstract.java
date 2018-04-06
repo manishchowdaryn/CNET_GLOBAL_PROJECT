@@ -158,10 +158,11 @@ public class Abstract extends BaseUtil {
 //	}
 
 	public void screenshotcapture() throws IOException, AWTException {
-
-		folderName = Reporter.createFolder();
+		folderName = Reporter.getFolder();
 		int i = Reporter.takescreenshot();
-		Reporter.addScreenCaptureFromPath("./Screenshot" + i + ".jpg");
+		Reporter.addScreenCaptureFromPath("./FailedScreenshot" + i + ".jpg", "CNET URL");
+
 	}
+
 
 }

@@ -175,9 +175,10 @@ public class Reporter {
     public static int takescreenshot() throws IOException, AWTException {
       	 Robot robot = new Robot();
       	 counter = counter+1;
-         	 Rectangle screenRect = new Rectangle(Toolkit.getDefaultToolkit().getScreenSize());
+      	 folderName = Reporter.getFolder();
+      	 Rectangle screenRect = new Rectangle(Toolkit.getDefaultToolkit().getScreenSize());
       	 BufferedImage screenFullImage = robot.createScreenCapture(screenRect);
-      	 ImageIO.write(screenFullImage, "jpg", new File(System.getProperty("user.dir") + "\\ExtentReport\\" + folderName +"\\Screenshot"+counter+".jpg"));
+      	 ImageIO.write(screenFullImage, "jpg", new File(System.getProperty("user.dir") + "\\ExtentReport\\" + folderName +"\\FailedScreenshot"+counter+".jpg"));
       	 return counter;
       	
       }
@@ -187,12 +188,16 @@ public class Reporter {
    	public static String createFolder() {
    		folderName = dateFormat.format(date);
    	   	folderName = "Run_"+folderName.replace(":", "_");
-   	   	String PATH = "Screenshots/";
+   	   	/*String PATH = "Screenshots/";
    	   	File directory = new File(PATH+"//"+folderName);
    	   	if(!directory.exists()){
    	   		directory.mkdir();
-   	   	}
+   	   	}*/
    	   	return folderName;
    	}
-	
+   	
+   	 public static String getFolder() {
+   	        return folderName;
+   	    }
+   	
 }

@@ -1,7 +1,7 @@
-2018-04-04 13:04:03 INFO  Hook:59 - Chrome Browser Launched Successfully
-2018-04-04 13:04:33 INFO  BaseUtil:62 - Enter CNet URL in the address bar of the browser
-2018-04-04 13:04:33 INFO  BaseUtil:93 - Switch to MainFrame
-2018-04-04 13:04:34 INFO  BaseUtil:110 - Entered Username
-2018-04-04 13:04:34 INFO  BaseUtil:116 - Entered Password
-2018-04-04 13:04:34 INFO  BaseUtil:120 - Clicked on Login Button
-2018-04-04 13:05:35 INFO  Hook:79 - Chrome Browser Launched Successfully
+2018-04-05 13:41:37 INFO  Hook:59 - Chrome Browser Launched Successfully
+2018-04-05 13:41:59 INFO  BaseUtil:62 - Enter CNet URL in the address bar of the browser
+2018-04-05 13:42:00 INFO  BaseUtil:93 - Switch to MainFrame
+2018-04-05 13:42:01 INFO  BaseUtil:110 - Entered Username
+2018-04-05 13:42:02 INFO  BaseUtil:116 - Entered Password
+2018-04-05 13:42:03 INFO  BaseUtil:120 - Clicked on Login Button
+2018-04-05 13:43:07 INFO  Hook:79 - Chrome Browser Launched Successfully

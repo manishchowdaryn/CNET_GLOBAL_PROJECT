@@ -46,10 +46,9 @@ public class RunCukes extends AbstractTestNGCucumberTests {
 		String destinationFile = System.getProperty("user.dir") + "\\ExtentReport\\CurrentReport";
 		File destinationDir = new File(destinationFile);
 
-		PrintWriter writer = new PrintWriter(System.getProperty("user.dir") + "\\ExtentReport\\Test.bat", "UTF-8");
-		writer.println("xcopy /s /y " + sourceFile + "*.*" + destinationDir);
+		PrintWriter writer = new PrintWriter(System.getProperty("user.dir") + "\\ExtentReport\\currentReport.bat", "UTF-8");
+		writer.println("xcopy /s /y " + sourceFile + "*.* " + destinationDir);
 		writer.close();
 
 	}
-
 }

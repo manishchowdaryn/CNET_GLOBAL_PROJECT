@@ -46,7 +46,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Apr 4, 2018 01:03:51 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Apr 5, 2018 01:41:20 PM</span>
 				</a>
 			</li>
 			<li>
@@ -184,12 +184,12 @@
 				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>CNet Global EndToEndDeployment Scenario</span>
-						<span class='test-time'>Apr 4, 2018 01:03:51 PM</span>
+						<span class='test-time'>Apr 5, 2018 01:41:21 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='scenariooutline node' test-id='2' status='fail'>
-	<span class='duration right label'>0h 1m 43s+172ms</span>
+	<span class='duration right label'>0h 1m 44s+944ms</span>
 	<div class='desc'>
 		<b>ScenarioOutline</b>
 		<span class="desc-text">EndToEndDeployment</span>
@@ -223,12 +223,39 @@
 					</li>
 					<li test-id='8' class='node when fail' status='fail'><b>When</b>
 						<span class="bdd-step-name">When Enter Value in Filter Navigation Field Text Box "Order Guides"</span>
-							<div class='pre'><pre>java.lang.NullPointerException
-	at javax.imageio.ImageIO.write(Unknown Source)
-	at com.cucumber.listener.Reporter.takescreenshot(Reporter.java:180)
-	at reusableFunction.Abstract.screenshotcapture(Abstract.java:163)
-	at reusableFunction.Abstract.waitUntilConditionSatisfy(Abstract.java:123)
-	at steps.EndToEndDeploymentSteps.enter_Value_in_Filter_navigation_Field_Text_Box(EndToEndDeploymentSteps.java:73)
+						<ul class='screenshots right'>
+							<li><a data-featherlight="image" href="./FailedScreenshot1.jpg"><i class='material-icons'>panorama</i></a></li>
+						</ul>
+							<div class='pre'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":".//*[@id='filter']"}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
+System info: host: 'DESKTOP-QQACKJ4', ip: '192.168.10.249', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\Maneesh\AppData\Lo...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 65.0.3325.181, webStorageEnabled: true}
+Session ID: 09fb9039736566cfdf621770188ec6e0
+*** Element info: {Using=xpath, value=.//*[@id='filter']}
+	at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy19.clear(Unknown Source)
+	at steps.EndToEndDeploymentSteps.enter_Value_in_Filter_navigation_Field_Text_Box(EndToEndDeploymentSteps.java:74)
 	at ?.When Enter Value in Filter Navigation Field Text Box "Order Guides"(EndToEndDeployment.feature:9)
 </pre></div>
 					</li>
@@ -621,7 +648,7 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Apr 4, 2018 01:03:51 PM</td>
+										<td>Apr 5, 2018 01:41:21 PM</td>
 										<td class='linked' test-id='3'>CNet Global EndToEndDeployment Scenario.EndToEndDeployment.EndToEndDeployment</td>
 										<td><span class='test-status fail'>fail</span></td>
 									</tr>
@@ -669,7 +696,7 @@
 
                         <li class='exception displayed active'>
                             <div class='exception-heading'>
-                                <span class='exception-name'>java.lang.NullPointerException</span>
+                                <span class='exception-name'>org.openqa.selenium.NoSuchElementException</span>
                                 <span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
                             </div>
                             <div class='exception-content hide'>
@@ -684,14 +711,38 @@
                                         </thead>
                                         <tbody>
                                                     <tr>
-                                                        <td>Apr 4, 2018 01:04:34 PM</td>
+                                                        <td>Apr 5, 2018 01:42:03 PM</td>
                                                         <td class='linked' test-id='8'>CNet Global EndToEndDeployment Scenario.EndToEndDeployment.EndToEndDeployment.When Enter Value in Filter Navigation Field Text Box "Order Guides"</td>
-                                                        <td><pre><pre>java.lang.NullPointerException
-	at javax.imageio.ImageIO.write(Unknown Source)
-	at com.cucumber.listener.Reporter.takescreenshot(Reporter.java:180)
-	at reusableFunction.Abstract.screenshotcapture(Abstract.java:163)
-	at reusableFunction.Abstract.waitUntilConditionSatisfy(Abstract.java:123)
-	at steps.EndToEndDeploymentSteps.enter_Value_in_Filter_navigation_Field_Text_Box(EndToEndDeploymentSteps.java:73)
+                                                        <td><pre><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":".//*[@id='filter']"}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
+System info: host: 'DESKTOP-QQACKJ4', ip: '192.168.10.249', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\Maneesh\AppData\Lo...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 65.0.3325.181, webStorageEnabled: true}
+Session ID: 09fb9039736566cfdf621770188ec6e0
+*** Element info: {Using=xpath, value=.//*[@id='filter']}
+	at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy19.clear(Unknown Source)
+	at steps.EndToEndDeploymentSteps.enter_Value_in_Filter_navigation_Field_Text_Box(EndToEndDeploymentSteps.java:74)
 	at ?.When Enter Value in Filter Navigation Field Text Box "Order Guides"(EndToEndDeployment.feature:9)
 </pre></pre></td>
                                                     </tr>
@@ -737,19 +788,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Apr 4, 2018 01:03:51 PM</div>
+					<div class='panel-lead'>Apr 5, 2018 01:41:20 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Apr 4, 2018 01:05:36 PM</div>
+			 		<div class='panel-lead'>Apr 5, 2018 01:43:08 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>104,382ms</div>
+					<div class='panel-lead'>108,159ms</div>
 				</div>
 			</div>
 			<div class='col s4'>

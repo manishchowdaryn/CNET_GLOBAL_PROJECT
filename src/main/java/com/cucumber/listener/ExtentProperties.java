@@ -14,11 +14,10 @@ public enum ExtentProperties {
     private String extentXServerUrl;
     private String projectName;
     
-    SimpleDateFormat dateFormat = new SimpleDateFormat("HH_mm_ss");
-    Date date = new Date();
-   
+ String folderName = Reporter.createFolder();
+    
     ExtentProperties() {
-        this.reportPath = "ExtentReport" + File.separator + "Run_" + dateFormat.format(date) + File.separator
+        this.reportPath = "ExtentReport" + File.separator + folderName + File.separator
                 + "report.html";
         this.projectName = "default";
     }
