@@ -46,7 +46,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Apr 5, 2018 12:23:00 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Apr 6, 2018 01:14:27 PM</span>
 				</a>
 			</li>
 			<li>
@@ -164,10 +164,10 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='4.878%'><span class='strong'>4</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='6.098%'><span class='strong'>5</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='1.22%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='93.902%'>77</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='1.22%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='92.683%'>76</span> others
 				</div>
 			</div>
 		</div>
@@ -184,12 +184,12 @@
 				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>CNet Global EndToEndDeployment Scenario</span>
-						<span class='test-time'>Apr 5, 2018 12:23:00 PM</span>
+						<span class='test-time'>Apr 6, 2018 01:14:29 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='scenariooutline node' test-id='2' status='fail'>
-	<span class='duration right label'>0h 1m 43s+950ms</span>
+	<span class='duration right label'>0h 1m 54s+2ms</span>
 	<div class='desc'>
 		<b>ScenarioOutline</b>
 		<span class="desc-text">EndToEndDeployment</span>
@@ -218,15 +218,19 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='7' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When Enter Username and Password as "test.user" and "test 1"</span>
+						<span class="bdd-step-name">When Enter Username and Password as "test.user" and "test"</span>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='8' class='node when fail' status='fail'><b>When</b>
+					<li test-id='8' class='node when pass' status='pass'><b>When</b>
 						<span class="bdd-step-name">When Enter Value in Filter Navigation Field Text Box "Order Guides"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='9' class='node and fail' status='fail'><b>And</b>
+						<span class="bdd-step-name">And Click on Service Catalog Order Guides Link</span>
 						<ul class='screenshots right'>
 							<li><a data-featherlight="image" href="./FailedScreenshot1.jpg"><i class='material-icons'>panorama</i></a></li>
 						</ul>
-							<div class='pre'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":".//*[@id='filter']"}
+							<div class='pre'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":".//*[@id='32ce5bb37f000001019feb946298246d']/div[1]/di"}
   (Session info: chrome=65.0.3325.181)
   (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
@@ -235,9 +239,9 @@ Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54
 System info: host: 'DESKTOP-QQACKJ4', ip: '192.168.10.249', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\Maneesh\AppData\Lo...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 65.0.3325.181, webStorageEnabled: true}
-Session ID: 3b6abc1639672cd483faaefa2fc385d7
-*** Element info: {Using=xpath, value=.//*[@id='filter']}
-	at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+Session ID: eb6ec702196c945ce586ead18442ce61
+*** Element info: {Using=xpath, value=.//*[@id='32ce5bb37f000001019feb946298246d']/div[1]/di}
+	at sun.reflect.GeneratedConstructorAccessor12.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
 	at java.lang.reflect.Constructor.newInstance(Unknown Source)
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
@@ -254,14 +258,10 @@ Session ID: 3b6abc1639672cd483faaefa2fc385d7
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy19.clear(Unknown Source)
-	at steps.EndToEndDeploymentSteps.enter_Value_in_Filter_navigation_Field_Text_Box(EndToEndDeploymentSteps.java:74)
-	at ?.When Enter Value in Filter Navigation Field Text Box "Order Guides"(EndToEndDeployment.feature:9)
+	at com.sun.proxy.$Proxy19.click(Unknown Source)
+	at steps.EndToEndDeploymentSteps.click_On_Service_Catalog_Order_Guides_Link(EndToEndDeploymentSteps.java:88)
+	at ?.And Click on Service Catalog Order Guides Link(EndToEndDeployment.feature:10)
 </pre></div>
-					</li>
-					<li test-id='9' class='node and skip' status='skip'><b>And</b>
-						<span class="bdd-step-name">And Click on Service Catalog Order Guides Link</span>
-							<div class='pre'>skipped</div>
 					</li>
 					<li test-id='10' class='node then skip' status='skip'><b>Then</b>
 						<span class="bdd-step-name">Then Switch to MainFrame</span>
@@ -648,7 +648,7 @@ Session ID: 3b6abc1639672cd483faaefa2fc385d7
 								</thead>
 								<tbody>
 									<tr>
-										<td>Apr 5, 2018 12:23:01 PM</td>
+										<td>Apr 6, 2018 01:14:29 PM</td>
 										<td class='linked' test-id='3'>CNet Global EndToEndDeployment Scenario.EndToEndDeployment.EndToEndDeployment</td>
 										<td><span class='test-status fail'>fail</span></td>
 									</tr>
@@ -711,9 +711,9 @@ Session ID: 3b6abc1639672cd483faaefa2fc385d7
                                         </thead>
                                         <tbody>
                                                     <tr>
-                                                        <td>Apr 5, 2018 12:23:42 PM</td>
-                                                        <td class='linked' test-id='8'>CNet Global EndToEndDeployment Scenario.EndToEndDeployment.EndToEndDeployment.When Enter Value in Filter Navigation Field Text Box "Order Guides"</td>
-                                                        <td><pre><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":".//*[@id='filter']"}
+                                                        <td>Apr 6, 2018 01:15:20 PM</td>
+                                                        <td class='linked' test-id='9'>CNet Global EndToEndDeployment Scenario.EndToEndDeployment.EndToEndDeployment.And Click on Service Catalog Order Guides Link</td>
+                                                        <td><pre><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":".//*[@id='32ce5bb37f000001019feb946298246d']/div[1]/di"}
   (Session info: chrome=65.0.3325.181)
   (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
@@ -722,9 +722,9 @@ Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54
 System info: host: 'DESKTOP-QQACKJ4', ip: '192.168.10.249', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\Maneesh\AppData\Lo...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 65.0.3325.181, webStorageEnabled: true}
-Session ID: 3b6abc1639672cd483faaefa2fc385d7
-*** Element info: {Using=xpath, value=.//*[@id='filter']}
-	at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+Session ID: eb6ec702196c945ce586ead18442ce61
+*** Element info: {Using=xpath, value=.//*[@id='32ce5bb37f000001019feb946298246d']/div[1]/di}
+	at sun.reflect.GeneratedConstructorAccessor12.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
 	at java.lang.reflect.Constructor.newInstance(Unknown Source)
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
@@ -741,9 +741,9 @@ Session ID: 3b6abc1639672cd483faaefa2fc385d7
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy19.clear(Unknown Source)
-	at steps.EndToEndDeploymentSteps.enter_Value_in_Filter_navigation_Field_Text_Box(EndToEndDeploymentSteps.java:74)
-	at ?.When Enter Value in Filter Navigation Field Text Box "Order Guides"(EndToEndDeployment.feature:9)
+	at com.sun.proxy.$Proxy19.click(Unknown Source)
+	at steps.EndToEndDeploymentSteps.click_On_Service_Catalog_Order_Guides_Link(EndToEndDeploymentSteps.java:88)
+	at ?.And Click on Service Catalog Order Guides Link(EndToEndDeployment.feature:10)
 </pre></pre></td>
                                                     </tr>
                                         </tbody>
@@ -788,19 +788,19 @@ Session ID: 3b6abc1639672cd483faaefa2fc385d7
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Apr 5, 2018 12:23:00 PM</div>
+					<div class='panel-lead'>Apr 6, 2018 01:14:27 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Apr 5, 2018 12:24:52 PM</div>
+			 		<div class='panel-lead'>Apr 6, 2018 01:16:25 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>112,227ms</div>
+					<div class='panel-lead'>117,613ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -870,14 +870,14 @@ Session ID: 3b6abc1639672cd483faaefa2fc385d7
 				infoChild: 0,
 				exceptionsChild: 1,
 				
-				passGrandChild: 4,
+				passGrandChild: 5,
 				failGrandChild: 1,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 77,
+				skipGrandChild: 76,
 				infoGrandChild: 0,
-				exceptionsGrandChild: 78,
+				exceptionsGrandChild: 77,
 			};
 		</script>
 		

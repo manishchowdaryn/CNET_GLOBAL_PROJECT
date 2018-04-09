@@ -1,5 +1,6 @@
 package steps;
 
+import java.awt.AWTException;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -122,7 +123,7 @@ public class ReusableSteps extends BaseUtil {
 	}
 
 	@Then("^Switch to Multiple Window and Select Text as \"([^\"]*)\"$")
-	public void HandleMultipleWindows(String lookupValue) throws IOException, InterruptedException {
+	public void HandleMultipleWindows(String lookupValue) throws IOException, InterruptedException, AWTException {
 		try {
 			String mainWindow = base.driver.getWindowHandle();
 			String windowTitle = base.driver.getTitle();
@@ -134,18 +135,23 @@ public class ReusableSteps extends BaseUtil {
 						WebDriverWait wait = new WebDriverWait(base.driver, 10);
 						wait.until(ExpectedConditions.elementToBeClickable(By.linkText(lookupValue)));
 						base.driver.findElement(By.linkText(lookupValue)).click();
+						logger.info("Switch to Multiple Window and Select Text as :" + lookupValue);
 					} catch (NoSuchElementException exc) {
 						exc.printStackTrace();
+						Abstract.screenshotcapture();
 					} catch (WebDriverException e) {
 						e.printStackTrace();
+						Abstract.screenshotcapture();
 					}
 				}
 			}
 			base.driver.switchTo().window(mainWindow);
 		} catch (NoSuchElementException exc) {
 			exc.printStackTrace();
+			Abstract.screenshotcapture();
 		} catch (WebDriverException e) {
 			e.printStackTrace();
+			Abstract.screenshotcapture();
 		}
 	}
 
@@ -153,16 +159,18 @@ public class ReusableSteps extends BaseUtil {
 	public void click_on_User_Menu_Dropdown() throws Throwable {
 		WebElement userMenuDropdownButton = Abstract.waitUntilConditionSatisfy(base, Logout.user_info_dropdown());
 		userMenuDropdownButton.click();
+		logger.info("Click on User Menu Dropdown");
 	}
 
 	@When("^Click on Logout$")
 	public void click_on_Logout() throws Throwable {
 		WebElement logoutButton = Abstract.waitUntilConditionSatisfy(base, Logout.logouButtont());
 		logoutButton.click();
+		logger.info("Click on Logout");
 	}
 
 	@Then("^Switch to Multiple Window$")
-	public void switchToMultipleWindow() throws IOException, InterruptedException {
+	public void switchToMultipleWindow() throws IOException, InterruptedException, AWTException {
 		try {
 			String mainWindow = base.driver.getWindowHandle();
 			String windowTitle = base.driver.getTitle();
@@ -173,10 +181,13 @@ public class ReusableSteps extends BaseUtil {
 				}
 			}
 			base.driver.switchTo().window(mainWindow);
+			logger.info("Switch to Multiple Window");
 		} catch (NoSuchElementException exc) {
 			exc.printStackTrace();
+			Abstract.screenshotcapture();
 		} catch (WebDriverException e) {
 			e.printStackTrace();
+			Abstract.screenshotcapture();
 		}
 	}
 

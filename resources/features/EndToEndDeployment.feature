@@ -87,7 +87,7 @@ Feature: CNet Global EndToEndDeployment Scenario
 
     Examples: 
       | Username  | Password | FilterValue  | Project    | EnvironmentInformation   | TypeOfEnvironment | EnvironmentName  | CloudPlatform | KeyPair | WebserverType | ContainerPlatform | ApplicationType | DatabaseType | DatabaseContainerPlatform | ServerRequested | ClusterName  | SelectNetwork | SecurityGroup | OperatingSystem | ServerSize | storageType | typeofStorage | EC2MountPath  | bucketName  | monitoringInformation | autoScalingType | DatabaseServiceRequested | DatabaseClusterName | DatabaseNetworkConfiguration | DatabaseSecurity | DatabaseOperatingSystem | CMDBTable           |
-      | test.user | test 1    | Order Guides | PRJ0010001 | Create Environment - New | Development       | Environment Name | AWS_New York  | qa      | Yes           | Kubernetes        | JAVA            | Yes          | Kubernetes                | Weblogic        | Cluster Name | vpc-f7c3d993  | test          | RHEL 7          | t2.medium  | Yes         | S3            | EC2Mount Name | Bucket Name | Yes                   | Yes             | Oracle                   | Cluster Name        | vpc-f7c3d993                 | test             | RHEL 7                  | cmdb_ci_server.list |
+      | test.user | test 	   | Order Guides | PRJ0010001 | Create Environment - New | Development       | Environment Name | AWS_New York  | qa      | Yes           | Kubernetes        | JAVA            | Yes          | Kubernetes                | Weblogic        | Cluster Name | vpc-f7c3d993  | test          | RHEL 7          | t2.medium  | Yes         | S3            | EC2Mount Name | Bucket Name | Yes                   | Yes             | Oracle                   | Cluster Name        | vpc-f7c3d993                 | test             | RHEL 7                  | cmdb_ci_server.list |
 
   @WebserverType
   Scenario Outline: EndToEndDeployment
@@ -157,7 +157,7 @@ Feature: CNet Global EndToEndDeployment Scenario
 
     Examples: 
       | Username  | Password | FilterValue  | Project    | EnvironmentInformation   | TypeOfEnvironment | EnvironmentName  | CloudPlatform | KeyPair | WebserverType | ContainerPlatform | ApplicationType | ServerRequested | ClusterName  | SelectNetwork | SecurityGroup | OperatingSystem | ServerSize | storageType | typeofStorage | EC2MountPath  | bucketName  | monitoringInformation | autoScalingType | CMDBTable           |
-      | test.user | test 1    | Order Guides | PRJ0010001 | Create Environment - New | Development       | Environment Name | AWS_New York  | qa      | Yes           | Kubernetes        | JAVA            | Weblogic        | Cluster Name | vpc-f7c3d993  | test          | RHEL 7          | t2.medium  | Yes         | S3            | EC2Mount Name | Bucket Name | Yes                   | Yes             | cmdb_ci_server.list |
+      | test.user | test	   | Order Guides | PRJ0010001 | Create Environment - New | Development       | Environment Name | AWS_New York  | qa      | Yes           | Kubernetes        | JAVA            | Weblogic        | Cluster Name | vpc-f7c3d993  | test          | RHEL 7          | t2.medium  | Yes         | S3            | EC2Mount Name | Bucket Name | Yes                   | Yes             | cmdb_ci_server.list |
 
   @DatabaseServiceType
   Scenario Outline: EndToEndDeployment
@@ -222,4 +222,4 @@ Feature: CNet Global EndToEndDeployment Scenario
 
     Examples: 
       | Username  | Password | FilterValue  | Project    | EnvironmentInformation   | TypeOfEnvironment | EnvironmentName  | CloudPlatform     | KeyPair | DatabaseType | DatabaseContainerPlatform | DatabaseServiceRequested | DatabaseClusterName | DatabaseNetworkConfiguration | DatabaseSecurity | DatabaseOperatingSystem | storageType | typeofStorage | EC2MountPath  | bucketName  | monitoringInformation | autoScalingType | CMDBTable           |
-      | test.user | test  1   | Order Guides | PRJ0010006 | Create Environment - New | Testing           | Environment Name | AWS_NY_LA_Z01_F10 | qa      | Yes          | Kubernetes                | Oracle                   | Cluster Name        | vpc-f7c3d993                 | test             | RHEL 7                  | Yes         | S3            | EC2Mount Name | Bucket Name | Yes                   | Yes             | cmdb_ci_server.list |
+      | test.user | test     | Order Guides | PRJ0010006 | Create Environment - New | Testing           | Environment Name | AWS_NY_LA_Z01_F10 | qa      | Yes          | Kubernetes                | Oracle                   | Cluster Name        | vpc-f7c3d993                 | test             | RHEL 7                  | Yes         | S3            | EC2Mount Name | Bucket Name | Yes                   | Yes             | cmdb_ci_server.list |

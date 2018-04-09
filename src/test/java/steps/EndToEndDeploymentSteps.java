@@ -11,6 +11,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.UnhandledAlertException;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
@@ -63,7 +64,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 		// Thread.sleep(10000);
 		String homePageTitle = base.driver.getTitle();
 		assertEquals("Home page loading... | ServiceNow", homePageTitle);
-		logger.info("Display Homepage ");
+		logger.info("Verify whether Home page is correctly opened or not");
 
 	}
 
@@ -74,7 +75,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 		searchFilter.clear();
 		searchFilter.sendKeys(searchFilterValue);
 		logger.info("Enter value in filter navigation");
-//		Thread.sleep(10000);
+
 
 	}
 
@@ -83,17 +84,18 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 		WebElement serviceCatalogOrderGuide = Abstract.waitUntilConditionSatisfy(base,
 				FilterNavigation.serviceCatalogOrderGuide());
-		
+		logger.info("Click on Service Catalog Order Guides Link");
 		serviceCatalogOrderGuide.click();
 		serviceCatalogOrderGuide.click();
 
 	}
-
+	
 	@When("^Click on End To End Deployment$")
 	public void click_On_End_To_End_Deployment() throws Throwable {
 
 		WebElement endToEndDeployment = Abstract.waitUntilConditionSatisfy(base, FilterNavigation.endToEndDeployment());
 		endToEndDeployment.click();
+		logger.info("Click on End To End Deployment");
 
 	}
 
@@ -102,6 +104,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 		WebElement tryIT = Abstract.waitUntilConditionSatisfy(base, FilterNavigation.tryIT());
 		Boolean status = tryIT.isEnabled();
+		logger.info("Verify whether Try It button is enabled or not");
 		Assert.assertTrue(status);
 
 	}
@@ -110,6 +113,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 	public void click_On_Try_It() throws Throwable {
 		WebElement tryIT = Abstract.waitUntilConditionSatisfy(base, FilterNavigation.tryIT());
 		tryIT.click();
+		logger.info("Click on Try It");
 	}
 
 	@Then("^Verify whether Describe Needs page is getting displayed or not$")
@@ -118,6 +122,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 		WebElement describeNeedsValue = Abstract.waitUntilConditionSatisfy(base, DescribeNeeds.describeNeedsText());
 		String describeNeedsValueText = describeNeedsValue.getText();
 		Assert.assertEquals(describeNeedsValueText, "Describe Needs");
+		logger.info("Verify whether Describe Needs page is getting displayed or not");
 
 	}
 
@@ -126,6 +131,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 		WebElement projectLookUP = Abstract.waitUntilConditionSatisfy(base, DescribeNeeds.projectLookUP());
 		projectLookUP.click();
+		logger.info("Click On Project LookUP");
 
 	}
 
@@ -135,6 +141,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 		WebElement environmentInformation = Abstract.waitUntilConditionSatisfy(base,
 				DescribeNeeds.environmentInformation());
 		Abstract.selectTheDropDownList(base, environmentInformation, environmentInformationValue);
+		logger.info("Select Environment Information as :" + environmentInformationValue);
 
 	}
 
@@ -150,6 +157,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 		WebElement typeOfEnvironment = Abstract.waitUntilConditionSatisfy(base, DescribeNeeds.typeOfEnvironment());
 		Abstract.selectTheDropDownList(base, typeOfEnvironment, typeofEnvironmentValue);
+		logger.info("Select Type of Environment as :"+ typeofEnvironmentValue );
 
 	}
 
@@ -157,6 +165,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 	public void environmentName(String environmentName) {
 		DescribeNeeds.environmentName().clear();
 		DescribeNeeds.environmentName().sendKeys(environmentName);
+		logger.info("Select Environment Name as :" + environmentName);
 	}
 
 	@When("^Click On Cloud Platform$")
@@ -164,6 +173,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 		WebElement cloudPlatformLookUP = Abstract.waitUntilConditionSatisfy(base, DescribeNeeds.cloudPlatfromLookUp());
 		cloudPlatformLookUP.click();
+		logger.info("Click On Cloud Platform");
 
 	}
 
@@ -172,6 +182,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 		WebElement existingKeyPairElement = Abstract.waitUntilConditionSatisfy(base, DescribeNeeds.existingKeyPair());
 		existingKeyPairElement.click();
+		logger.info("Select Existing Key Pair Checkbox");
 
 	}
 
@@ -180,6 +191,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 		WebElement selectKeyPairLookUP = Abstract.waitUntilConditionSatisfy(base, DescribeNeeds.selectKeyPair());
 		selectKeyPairLookUP.click();
+		logger.info("Click On Select Key Pair");
 
 	}
 
@@ -188,6 +200,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 		WebElement webServerCheckbox = Abstract.waitUntilConditionSatisfy(base, DescribeNeeds.webserverChecbox());
 		webServerCheckbox.click();
+		logger.info("Select WebServer Checkbox");
 
 	}
 
@@ -196,6 +209,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 		WebElement webserverType = Abstract.waitUntilConditionSatisfy(base, DescribeNeeds.webserverType());
 		Abstract.selectTheDropDownList(base, webserverType, webserverTypeValue);
+		logger.info("Select Webserver Type as :" + webserverTypeValue );
 
 	}
 
@@ -204,6 +218,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 		WebElement containerPlatform = Abstract.waitUntilConditionSatisfy(base, DescribeNeeds.containerPlatform());
 		Abstract.selectTheDropDownList(base, containerPlatform, containerPlatformValue);
+		logger.info("Select Container Platform as :" + containerPlatformValue);
 
 	}
 
@@ -213,6 +228,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 		WebElement databaseServerCheckbox = Abstract.waitUntilConditionSatisfy(base,
 				DescribeNeeds.databaseserverChecbox());
 		databaseServerCheckbox.click();
+		logger.info("Select Database Server Checkbox");
 
 	}
 
@@ -221,6 +237,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 		WebElement databaseServerType = Abstract.waitUntilConditionSatisfy(base, DescribeNeeds.databaseserverType());
 		Abstract.selectTheDropDownList(base, databaseServerType, databaseserverTypeValue);
+		logger.info("Select Database Type as :"+databaseserverTypeValue);
 
 	}
 
@@ -231,6 +248,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 		WebElement databasecontainerPlatform = Abstract.waitUntilConditionSatisfy(base,
 				DescribeNeeds.databasecontainerPlatform());
 		Abstract.selectTheDropDownList(base, databasecontainerPlatform, databasecontainerPlatformValue);
+		logger.info("Select Database Container Platform as :"+ databasecontainerPlatformValue);
 
 	}
 
@@ -239,6 +257,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 		WebElement applicationType = Abstract.waitUntilConditionSatisfy(base, DescribeNeeds.applicationType());
 		Abstract.selectTheDropDownList(base, applicationType, applicationTypeValue);
+		logger.info("Select Application Type as :"+applicationTypeValue);
 
 	}
 
@@ -247,9 +266,10 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 		WebElement chooseOptions = Abstract.waitUntilConditionSatisfy(base, DescribeNeeds.chooseOptions());
 		chooseOptions.click();
+		logger.info("Click on Choose Options");
 
 	}
-
+	
 	@Then("^Verify whether Choose Options page is getting displayed or not$")
 	public void verifyChooseOptions() throws Throwable {
 
@@ -257,6 +277,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 		String chooseOptionsText = chooseOptions.getText();
 		assertEquals(chooseOptionsText, "Choose Options");
 		Thread.sleep(5000);
+		logger.info("Verify whether Choose Options page is getting displayed or not");
 
 	}
 
@@ -266,6 +287,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 		WebElement serverRequestedLookUP = Abstract.waitUntilConditionSatisfy(base,
 				ChooseOptions.serviceRequestedLookUp());
 		serverRequestedLookUP.click();
+		logger.info("Click On Server Requested LookUP");
 
 	}
 
@@ -274,6 +296,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 		ChooseOptions.clusterName().clear();
 		ChooseOptions.clusterName().sendKeys(clusterNameValue);
+		logger.info("Enter Cluster Name as :"+clusterNameValue);
 
 	}
 
@@ -283,6 +306,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 		WebElement selectNetworkexistingKeyPair = Abstract.waitUntilConditionSatisfy(base,
 				ChooseOptions.selectNetworkexistingKeyPair());
 		selectNetworkexistingKeyPair.click();
+		logger.info("Select Existing Network Checkbox");
 
 	}
 
@@ -291,7 +315,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 		WebElement selectNetworkLookUP = Abstract.waitUntilConditionSatisfy(base, ChooseOptions.selectNetworkLookUP());
 		selectNetworkLookUP.click();
-
+		logger.info("Click On Select Network");
 	}
 
 	@When("^Select Security Group Checkbox$")
@@ -299,6 +323,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 		WebElement securityGroup = Abstract.waitUntilConditionSatisfy(base, ChooseOptions.securityGroup());
 		securityGroup.click();
+		logger.info("Select Security Group Checkbox");
 
 	}
 
@@ -307,6 +332,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 		WebElement securityGroupLookUp = Abstract.waitUntilConditionSatisfy(base, ChooseOptions.securityGroupLookUp());
 		securityGroupLookUp.click();
+		logger.info("Click On Security Group");
 
 	}
 
@@ -316,6 +342,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 		WebElement operatingSystemLookUp = Abstract.waitUntilConditionSatisfy(base,
 				ChooseOptions.operatingSystemLookUp());
 		operatingSystemLookUp.click();
+		logger.info("Click On Operating System LookUP");
 
 	}
 
@@ -324,6 +351,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 		WebElement serverSizeLookUp = Abstract.waitUntilConditionSatisfy(base, ChooseOptions.serverSizeLookUp());
 		serverSizeLookUp.click();
+		logger.info("Click On Server Size LookUP");
 
 	}
 	
@@ -333,8 +361,12 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 		WebElement storageTypeVar = Abstract.waitUntilConditionSatisfy(base, ChooseOptions.storageType());
 		Abstract.selectTheDropDownList(base, storageTypeVar, storageType);
 
+		logger.info("Select Additional Storage as :"+ storageType + "and" + typeofStorage + "and"+ EC2MountPath + "and"+bucketName);
+		
 		if (storageType.equalsIgnoreCase("Yes")) {
 
+			logger.info("Select Additional Storage as :"+ storageType);
+					
 			WebElement typeofStorageVar = Abstract.waitUntilConditionSatisfy(base, ChooseOptions.typeofStorage());
 			Abstract.selectTheDropDownList(base, typeofStorageVar, typeofStorage);
 
@@ -343,7 +375,9 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 			WebElement bucketNameVar = Abstract.waitUntilConditionSatisfy(base, ChooseOptions.bucketName());
 			bucketNameVar.sendKeys(bucketName);
-		}
+			
+			}
+		
 	}
 
 	@When("Select Monitoring Information as \"([^\"]*)\"$")
@@ -351,6 +385,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 		WebElement monitoringInformationVar = Abstract.waitUntilConditionSatisfy(base, ChooseOptions.monitoringInformationLoc());
 		Abstract.selectTheDropDownList(base, monitoringInformationVar, monitoringInformation);
+		logger.info("Select Monitoring Information as :"+monitoringInformation);
 		
 	}
 
@@ -359,6 +394,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 		WebElement autoScalingTypeVar = Abstract.waitUntilConditionSatisfy(base, ChooseOptions.autoScaling());
 		Abstract.selectTheDropDownList(base, autoScalingTypeVar, autoScalingType);
+		logger.info("Select Auto Scaling as :"+autoScalingType);
 
 	}
 	
@@ -372,6 +408,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 		WebElement nextTab = Abstract.waitUntilConditionSatisfy(base, ChooseOptions.nextTab());
 		nextTab.click();
 		Thread.sleep(5000);
+		logger.info("Click On Next Tab");
 
 	}
 
@@ -382,6 +419,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 				ChooseOptions.databaseselectNetworkexistingKeyPair());
 		databaseselectNetworkexistingKeyPair.click();
 
+		logger.info("Select Database Network Configuration Checkbox");
 	}
 
 	@When("^Click On Database Network Configuration Group$")
@@ -390,6 +428,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 		WebElement databaseselectNetworkLookUP = Abstract.waitUntilConditionSatisfy(base,
 				ChooseOptions.databaseselectNetworkLookUP());
 		databaseselectNetworkLookUP.click();
+		logger.info("Click On Database Network Configuration Group");
 
 	}
 
@@ -399,6 +438,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 		WebElement databaseSecurityGroup = Abstract.waitUntilConditionSatisfy(base,
 				ChooseOptions.databaseSecurityGroup());
 		databaseSecurityGroup.click();
+		logger.info("Select Database Security Group Checkbox");
 
 	}
 
@@ -408,6 +448,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 		WebElement databaseSecurityGroupLookUP = Abstract.waitUntilConditionSatisfy(base,
 				ChooseOptions.databaseSecurityGroupLookUP());
 		databaseSecurityGroupLookUP.click();
+		logger.info("Click On Database Security Group");
 
 	}
 
@@ -417,6 +458,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 		WebElement databaseServiceRequestedLookUp = Abstract.waitUntilConditionSatisfy(base,
 				ChooseOptions.databaseServiceRequestedLookUp());
 		databaseServiceRequestedLookUp.click();
+		logger.info("Click On Database Service Requested LookUP");
 
 	}
 
@@ -425,8 +467,10 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 		ChooseOptions.databaseClusterName().clear();
 		ChooseOptions.databaseClusterName().sendKeys(databaseClusterNameValue);
+		logger.info("Enter Database Cluster Name as :"+databaseClusterNameValue);
 
 	}
+
 
 	@When("^Click On Database Operating System LookUP$")
 	public void click_On_Database_Operating_System() throws Throwable {
@@ -434,6 +478,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 		WebElement databaseOperatingSystemLookUp = Abstract.waitUntilConditionSatisfy(base,
 				ChooseOptions.databaseOperatingSystemLookUp());
 		databaseOperatingSystemLookUp.click();
+		logger.info("Click On Database Operating System LookUP");
 
 	}
 
@@ -442,6 +487,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 		WebElement checkOut = Abstract.waitUntilConditionSatisfy(base, ChooseOptions.checkOut());
 		checkOut.click();
+		logger.info("Click On Check Out");
 		Thread.sleep(5000);
 
 	}
@@ -452,6 +498,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 		WebElement shoppingCart = Abstract.waitUntilConditionSatisfy(base, ChooseOptions.shoppingCart());
 		String shoppingCartText = shoppingCart.getText();
 		assertEquals(shoppingCartText, "Shopping Cart");
+		logger.info("Verify whether Shopping Cart page is getting displayed or not");
 
 	}
 
@@ -460,6 +507,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 		WebElement orderNow = Abstract.waitUntilConditionSatisfy(base, ChooseOptions.orderNow());
 		orderNow.click();
+		logger.info("Click on Order Now");
 
 	}
 
@@ -469,6 +517,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 		WebElement successMessage = Abstract.waitUntilConditionSatisfy(base, ChooseOptions.successMessage());
 		String successMessageValue = successMessage.getText();
 		assertEquals(successMessageValue, "Thank you, your request has been submitted");
+		logger.info("Validate Successful Message is displayed or not");
 
 	}
 
@@ -478,6 +527,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 		WebElement requestNumber = Abstract.waitUntilConditionSatisfy(base, ChooseOptions.getRequestNumber());
 		String requestNumberValue = requestNumber.getText();
 		System.out.println(requestNumberValue);
+		logger.info("Get the Request Number after created :"+requestNumberValue );
 
 	}
 
@@ -486,6 +536,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 		WebElement requestNumber = Abstract.waitUntilConditionSatisfy(base, ChooseOptions.getRequestNumber());
 		requestNumber.click();
+		logger.info("Click On Recently Created Requested Number");
 
 	}
 
@@ -494,12 +545,16 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 		Thread.sleep(5000);
 
-		//WebElement ritmNumber = Abstract.waitUntilConditionSatisfy(base, RequestProcess.RITMNumbers());
-
+		try {
+		//WebElement ritmNumber = Abstract.waitUntilConditionSatisfy(base, RequestProcess.RITMNumbers();
+		
 		List<WebElement> ritmNumberValue = base.driver.findElements(By.xpath(
 				"html/body/div[2]/div[2]/div/div[1]/span/div[2]/div[4]/table[1]/tbody/tr/td/div/table/tbody/tr/td[3]/a"));
+		
 		System.out.println(ritmNumberValue.size());
 
+		logger.info("Number of RITM Numbers are :" + ritmNumberValue.size());
+		
 		for (int i = 1; i <= ritmNumberValue.size(); i++) {
 
 			WebElement ritmLinkText = base.driver.findElement(By.xpath(
@@ -507,6 +562,8 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 							+ "]/td[3]/a"));
 			
 			Thread.sleep(5000);
+			
+			logger.info("Click on RITM Number and Approve them for the Request Created as: "+ ritmLinkText.getText());
 			
 			ritmLinkText.click();
 
@@ -540,6 +597,8 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 			}
 
+			logger.info("RITM Number "+ ritmLinkText.getText() + "are approved successfully");
+			
 			WebElement updateButton = Abstract.waitUntilConditionSatisfy(base, RequestProcess.updateButton());
 			updateButton.click();
 			Thread.sleep(5000);
@@ -552,6 +611,13 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 		base.driver.findElement(By.id("sysverb_update")).click();
 		Thread.sleep(5000);
+		
+		} catch (WebDriverException e) {
+			e.printStackTrace();
+			//Method to capture failed Screenshot
+			Abstract.screenshotcapture();
+
+		}
 	}
 
 	@When("^Search Request in a CMDB Table as \"([^\"]*)\"$")
@@ -561,6 +627,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 		WebElement searchFilter = Abstract.waitUntilConditionSatisfy(base, FilterNavigation.searchFilter());
 		searchFilter.sendKeys(searchFilterValue);
 		searchFilter.sendKeys(Keys.ENTER);
+		logger.info("Search Request in a CMDB Table as :"+searchFilterValue);
 
 	}
 

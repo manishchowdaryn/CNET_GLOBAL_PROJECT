@@ -46,7 +46,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Apr 5, 2018 01:30:43 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Apr 6, 2018 02:57:52 PM</span>
 				</a>
 			</li>
 			<li>
@@ -164,10 +164,10 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='4.878%'><span class='strong'>4</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='1.22%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='93.902%'>77</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='1.22%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='98.78%'>81</span> others
 				</div>
 			</div>
 		</div>
@@ -184,12 +184,12 @@
 				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>CNet Global EndToEndDeployment Scenario</span>
-						<span class='test-time'>Apr 5, 2018 01:30:43 PM</span>
+						<span class='test-time'>Apr 6, 2018 02:57:53 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='scenariooutline node' test-id='2' status='fail'>
-	<span class='duration right label'>0h 1m 31s+29ms</span>
+	<span class='duration right label'>0h 0m 19s+326ms</span>
 	<div class='desc'>
 		<b>ScenarioOutline</b>
 		<span class="desc-text">EndToEndDeployment</span>
@@ -205,39 +205,19 @@
 			<span class="bdd-step-name">EndToEndDeployment</span>
 			
 				<ul class='steps'>
-					<li test-id='4' class='node given pass' status='pass'><b>Given</b>
+					<li test-id='4' class='node given fail' status='fail'><b>Given</b>
 						<span class="bdd-step-name">Given Launch Browser and Navigate to CNet URL</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='5' class='node then pass' status='pass'><b>Then</b>
-						<span class="bdd-step-name">Then Switch to MainFrame</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='6' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Verify whether Login page is correctly opened or not</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='7' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When Enter Username and Password as "test.user" and "test 1"</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='8' class='node when fail' status='fail'><b>When</b>
-						<span class="bdd-step-name">When Enter Value in Filter Navigation Field Text Box "Order Guides"</span>
-						<ul class='screenshots right'>
-							<li><a data-featherlight="image" href="./FailedScreenshot1.jpg"><i class='material-icons'>panorama</i></a></li>
-						</ul>
-							<div class='pre'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":".//*[@id='filter']"}
+							<div class='pre'><pre>org.openqa.selenium.WebDriverException: unknown error: failed to change window state to normal, current state is maximized
   (Session info: chrome=65.0.3325.181)
   (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
 System info: host: 'DESKTOP-QQACKJ4', ip: '192.168.10.249', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\Maneesh\AppData\Lo...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 65.0.3325.181, webStorageEnabled: true}
-Session ID: 325b39f3b6eb65c2238deb51c1e86520
-*** Element info: {Using=xpath, value=.//*[@id='filter']}
-	at sun.reflect.GeneratedConstructorAccessor16.newInstance(Unknown Source)
+Session ID: 3eb41e71541a932ef276c54e7450f108
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
 	at java.lang.reflect.Constructor.newInstance(Unknown Source)
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
@@ -248,16 +228,27 @@ Session ID: 325b39f3b6eb65c2238deb51c1e86520
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy19.clear(Unknown Source)
-	at steps.EndToEndDeploymentSteps.enter_Value_in_Filter_navigation_Field_Text_Box(EndToEndDeploymentSteps.java:74)
-	at ?.When Enter Value in Filter Navigation Field Text Box "Order Guides"(EndToEndDeployment.feature:9)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:658)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:892)
+	at steps.ReusableSteps.launch_Browser_and_Navigate_to_CNet_URL(ReusableSteps.java:61)
+	at ?.Given Launch Browser and Navigate to CNet URL(EndToEndDeployment.feature:5)
 </pre></div>
+					</li>
+					<li test-id='5' class='node then skip' status='skip'><b>Then</b>
+						<span class="bdd-step-name">Then Switch to MainFrame</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='6' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Verify whether Login page is correctly opened or not</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='7' class='node when skip' status='skip'><b>When</b>
+						<span class="bdd-step-name">When Enter Username and Password as "test.user" and "test"</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='8' class='node when skip' status='skip'><b>When</b>
+						<span class="bdd-step-name">When Enter Value in Filter Navigation Field Text Box "Order Guides"</span>
+							<div class='pre'>skipped</div>
 					</li>
 					<li test-id='9' class='node and skip' status='skip'><b>And</b>
 						<span class="bdd-step-name">And Click on Service Catalog Order Guides Link</span>
@@ -648,7 +639,7 @@ Session ID: 325b39f3b6eb65c2238deb51c1e86520
 								</thead>
 								<tbody>
 									<tr>
-										<td>Apr 5, 2018 01:30:44 PM</td>
+										<td>Apr 6, 2018 02:57:53 PM</td>
 										<td class='linked' test-id='3'>CNet Global EndToEndDeployment Scenario.EndToEndDeployment.EndToEndDeployment</td>
 										<td><span class='test-status fail'>fail</span></td>
 									</tr>
@@ -696,7 +687,7 @@ Session ID: 325b39f3b6eb65c2238deb51c1e86520
 
                         <li class='exception displayed active'>
                             <div class='exception-heading'>
-                                <span class='exception-name'>org.openqa.selenium.NoSuchElementException</span>
+                                <span class='exception-name'>org.openqa.selenium.WebDriverException</span>
                                 <span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
                             </div>
                             <div class='exception-content hide'>
@@ -711,20 +702,19 @@ Session ID: 325b39f3b6eb65c2238deb51c1e86520
                                         </thead>
                                         <tbody>
                                                     <tr>
-                                                        <td>Apr 5, 2018 01:31:12 PM</td>
-                                                        <td class='linked' test-id='8'>CNet Global EndToEndDeployment Scenario.EndToEndDeployment.EndToEndDeployment.When Enter Value in Filter Navigation Field Text Box "Order Guides"</td>
-                                                        <td><pre><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":".//*[@id='filter']"}
+                                                        <td>Apr 6, 2018 02:58:09 PM</td>
+                                                        <td class='linked' test-id='4'>CNet Global EndToEndDeployment Scenario.EndToEndDeployment.EndToEndDeployment.Given Launch Browser and Navigate to CNet URL</td>
+                                                        <td><pre><pre>org.openqa.selenium.WebDriverException: unknown error: failed to change window state to normal, current state is maximized
   (Session info: chrome=65.0.3325.181)
   (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
 System info: host: 'DESKTOP-QQACKJ4', ip: '192.168.10.249', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\Maneesh\AppData\Lo...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 65.0.3325.181, webStorageEnabled: true}
-Session ID: 325b39f3b6eb65c2238deb51c1e86520
-*** Element info: {Using=xpath, value=.//*[@id='filter']}
-	at sun.reflect.GeneratedConstructorAccessor16.newInstance(Unknown Source)
+Session ID: 3eb41e71541a932ef276c54e7450f108
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
 	at java.lang.reflect.Constructor.newInstance(Unknown Source)
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
@@ -735,15 +725,10 @@ Session ID: 325b39f3b6eb65c2238deb51c1e86520
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy19.clear(Unknown Source)
-	at steps.EndToEndDeploymentSteps.enter_Value_in_Filter_navigation_Field_Text_Box(EndToEndDeploymentSteps.java:74)
-	at ?.When Enter Value in Filter Navigation Field Text Box "Order Guides"(EndToEndDeployment.feature:9)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:658)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:892)
+	at steps.ReusableSteps.launch_Browser_and_Navigate_to_CNet_URL(ReusableSteps.java:61)
+	at ?.Given Launch Browser and Navigate to CNet URL(EndToEndDeployment.feature:5)
 </pre></pre></td>
                                                     </tr>
                                         </tbody>
@@ -788,19 +773,19 @@ Session ID: 325b39f3b6eb65c2238deb51c1e86520
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Apr 5, 2018 01:30:43 PM</div>
+					<div class='panel-lead'>Apr 6, 2018 02:57:52 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Apr 5, 2018 01:32:17 PM</div>
+			 		<div class='panel-lead'>Apr 6, 2018 02:58:16 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>94,033ms</div>
+					<div class='panel-lead'>23,942ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -870,14 +855,14 @@ Session ID: 325b39f3b6eb65c2238deb51c1e86520
 				infoChild: 0,
 				exceptionsChild: 1,
 				
-				passGrandChild: 4,
+				passGrandChild: 0,
 				failGrandChild: 1,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 77,
+				skipGrandChild: 81,
 				infoGrandChild: 0,
-				exceptionsGrandChild: 78,
+				exceptionsGrandChild: 82,
 			};
 		</script>
 		

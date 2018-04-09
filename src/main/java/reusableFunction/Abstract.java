@@ -93,15 +93,16 @@ public class Abstract extends BaseUtil {
 //	}
 
 	@Step("Method to select by text from drop down")
-	public void selectTheDropDownList(BaseUtil base, WebElement dropDown, String text) {
+	public void selectTheDropDownList(BaseUtil base, WebElement dropDown, String text) throws IOException, AWTException {
 		try {
 			Select select = new Select(dropDown);
 			select.selectByVisibleText(text);
-		} catch (NoSuchElementException exc) {
+		/*} catch (NoSuchElementException exc) {
 			exc.printStackTrace();
-
+			screenshotcapture();*/
 		} catch (Exception e) {
 			e.printStackTrace();
+			screenshotcapture();
 
 		}
 	}
@@ -114,9 +115,7 @@ public class Abstract extends BaseUtil {
 					.withTimeout(60, TimeUnit.SECONDS).pollingEvery(2, TimeUnit.MILLISECONDS)
 					.ignoring(NoSuchElementException.class);
 			waitforelement.until(ExpectedConditions.elementToBeClickable(webElement));
-		} catch (NoSuchElementException exc) {
-			exc.printStackTrace();
-
+		
 		} catch (WebDriverException e) {
 			e.printStackTrace();
 			//Method to capture failed Screenshot
