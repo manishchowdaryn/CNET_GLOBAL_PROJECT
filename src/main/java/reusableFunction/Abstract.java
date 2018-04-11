@@ -2,13 +2,9 @@ package reusableFunction;
 
 import java.awt.AWTException;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.MissingResourceException;
-import java.util.ResourceBundle;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
@@ -93,29 +89,32 @@ public class Abstract extends BaseUtil {
 //	}
 
 	@Step("Method to select by text from drop down")
-	public void selectTheDropDownList(BaseUtil base, WebElement dropDown, String text) throws IOException, AWTException {
+	public void selectTheDropDownList(BaseUtil base, WebElement dropDown, String text) {
 		try {
 			Select select = new Select(dropDown);
 			select.selectByVisibleText(text);
-		/*} catch (NoSuchElementException exc) {
+			Thread.sleep(1000);
+		} catch (NoSuchElementException exc) {
 			exc.printStackTrace();
-			screenshotcapture();*/
+
 		} catch (Exception e) {
 			e.printStackTrace();
-			screenshotcapture();
 
 		}
 	}
 
 	@Step("Method to wait until condition is satisfied")
-	public WebElement waitUntilConditionSatisfy(BaseUtil base, WebElement webElement) throws IOException, AWTException {
+	public WebElement waitUntilConditionSatisfy(BaseUtil base, WebElement webElement) throws IOException, AWTException, InterruptedException {
 
 		try {
 			FluentWait<WebDriver> waitforelement = new FluentWait<WebDriver>(base.driver)
-					.withTimeout(60, TimeUnit.SECONDS).pollingEvery(2, TimeUnit.MILLISECONDS)
+					.withTimeout(120, TimeUnit.SECONDS).pollingEvery(2, TimeUnit.MILLISECONDS)
 					.ignoring(NoSuchElementException.class);
 			waitforelement.until(ExpectedConditions.elementToBeClickable(webElement));
-		
+			Thread.sleep(1500);
+		} catch (NoSuchElementException exc) {
+			exc.printStackTrace();
+
 		} catch (WebDriverException e) {
 			e.printStackTrace();
 			//Method to capture failed Screenshot
@@ -156,12 +155,19 @@ public class Abstract extends BaseUtil {
 //
 //	}
 
+	public void scrolldown(BaseUtil base) throws InterruptedException {
+		
+		JavascriptExecutor js = (JavascriptExecutor) base.driver;
+        js.executeScript("javascript:window.scrollBy(250,350)");
+        Thread.sleep(1000);
+	}
+	
+	
 	public void screenshotcapture() throws IOException, AWTException {
 		folderName = Reporter.getFolder();
 		int i = Reporter.takescreenshot();
 		Reporter.addScreenCaptureFromPath("./FailedScreenshot" + i + ".jpg", "CNET URL");
 
 	}
-
-
+	
 }

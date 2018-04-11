@@ -41,7 +41,7 @@ public class DescribeNeeds {
      	@FindBy(how = How.XPATH, using = ".//*[@id='lookup.IO:01677ca6db720300a68fda11cf9619ed']")
 	    public WebElement cloudPlatfromLookUp;
      	
-     	@FindBy(how = How.XPATH, using = "//div[@id='IO:3642a57fdbc01300a68fda11cf961938']/div[2]/div/span[2]/div/span/label")
+     	@FindBy(how = How.XPATH, using = "//LABEL[@class='radio-label'][text()='Use Existing Key Pair']")
 	    public WebElement existingKeyPair;
      	
      	@FindBy(how = How.XPATH, using = ".//*[@id='lookup.IO:c0e3a5bfdbc01300a68fda11cf9619c1']")

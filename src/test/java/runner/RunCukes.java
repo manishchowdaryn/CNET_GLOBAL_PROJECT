@@ -18,7 +18,7 @@ import cucumber.api.java.After;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(features = {
-		"resources/features" }, monochrome = true, glue = "steps", tags = "@EndToEndDeploymentFlow", plugin = {
+		"resources/features" }, monochrome = true, glue = "steps", tags = "@EndToEndDeploymentFlow, @WebserverType, @DatabaseServiceType", plugin = {
 				"html:target/site/cucumber-report-html", "json:target/cucumber.json",
 				"pretty:target/cucumber-pretty.txt", "usage:target/cucumber-usage.json",
 				"com.cucumber.listener.ExtentCucumberFormatter:" })
@@ -36,7 +36,7 @@ public class RunCukes extends AbstractTestNGCucumberTests {
 		Reporter.loadXMLConfig(new File("extent-config.xml"));
 		Reporter.setSystemInfo("user", System.getProperty("user.name"));
 		Reporter.setSystemInfo("os", "Windows 7");
-		
+
 		ExtentProperties extentProperties = ExtentProperties.INSTANCE;
 		String reportPath = extentProperties.getReportPath().replace("report.html", "");
 
@@ -46,7 +46,8 @@ public class RunCukes extends AbstractTestNGCucumberTests {
 		String destinationFile = System.getProperty("user.dir") + "\\ExtentReport\\CurrentReport";
 		File destinationDir = new File(destinationFile);
 
-		PrintWriter writer = new PrintWriter(System.getProperty("user.dir") + "\\ExtentReport\\currentReport.bat", "UTF-8");
+		PrintWriter writer = new PrintWriter(System.getProperty("user.dir") + "\\ExtentReport\\currentReport.bat",
+				"UTF-8");
 		writer.println("xcopy /s /y " + sourceFile + "*.* " + destinationDir);
 		writer.close();
 

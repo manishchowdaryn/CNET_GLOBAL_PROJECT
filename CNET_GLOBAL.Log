@@ -1,38 +1,221 @@
-2018-04-09 12:30:42 INFO  Hook:59 - Chrome Browser Launched Successfully
-2018-04-09 12:30:55 INFO  BaseUtil:63 - Enter CNet URL in the address bar of the browser
-2018-04-09 12:30:55 INFO  BaseUtil:94 - Switch to MainFrame
-2018-04-09 12:30:56 INFO  BaseUtil:111 - Entered Username
-2018-04-09 12:30:56 INFO  BaseUtil:117 - Entered Password
-2018-04-09 12:30:57 INFO  BaseUtil:121 - Clicked on Login Button
-2018-04-09 12:31:07 INFO  ReusableSteps:77 - Enter value in filter navigation
-2018-04-09 12:31:12 INFO  ReusableSteps:87 - Click on Service Catalog Order Guides Link
-2018-04-09 12:31:13 INFO  BaseUtil:94 - Switch to MainFrame
-2018-04-09 12:31:18 INFO  ReusableSteps:98 - Click on End To End Deployment
-2018-04-09 12:31:22 INFO  ReusableSteps:107 - Verify whether Try It button is enabled or not
-2018-04-09 12:31:23 INFO  ReusableSteps:116 - Click on Try It
-2018-04-09 12:31:29 INFO  ReusableSteps:125 - Verify whether Describe Needs page is getting displayed or not
-2018-04-09 12:31:31 INFO  ReusableSteps:134 - Click On Project LookUP
-2018-04-09 12:31:33 INFO  BaseUtil:138 - Switch to Multiple Window and Select Text as :PRJ0010001
-2018-04-09 12:31:33 INFO  BaseUtil:94 - Switch to MainFrame
-2018-04-09 12:31:34 INFO  ReusableSteps:144 - Select Environment Information as :Create Environment - New
-2018-04-09 12:31:34 INFO  ReusableSteps:160 - Select Type of Environment as :Development
-2018-04-09 12:31:36 INFO  ReusableSteps:168 - Select Environment Name as :Environment Name
-2018-04-09 12:31:37 INFO  ReusableSteps:176 - Click On Cloud Platform
-2018-04-09 12:31:39 INFO  BaseUtil:138 - Switch to Multiple Window and Select Text as :AWS_New York
-2018-04-09 12:31:40 INFO  BaseUtil:94 - Switch to MainFrame
-2018-04-09 12:31:40 INFO  ReusableSteps:185 - Select Existing Key Pair Checkbox
-2018-04-09 12:31:41 INFO  ReusableSteps:194 - Click On Select Key Pair
-2018-04-09 12:31:43 INFO  BaseUtil:138 - Switch to Multiple Window and Select Text as :qa
-2018-04-09 12:31:44 INFO  BaseUtil:94 - Switch to MainFrame
-2018-04-09 12:31:44 INFO  ReusableSteps:203 - Select WebServer Checkbox
-2018-04-09 12:31:45 INFO  ReusableSteps:212 - Select Webserver Type as :Yes
-2018-04-09 12:31:46 INFO  ReusableSteps:221 - Select Container Platform as :Kubernetes
-2018-04-09 12:31:46 INFO  ReusableSteps:260 - Select Application Type as :JAVA
-2018-04-09 12:31:47 INFO  ReusableSteps:231 - Select Database Server Checkbox
-2018-04-09 12:31:47 INFO  ReusableSteps:240 - Select Database Type as :Yes
-2018-04-09 12:31:48 INFO  ReusableSteps:251 - Select Database Container Platform as :Kubernetes
-2018-04-09 12:31:49 INFO  ReusableSteps:269 - Click on Choose Options
-2018-04-09 12:31:55 INFO  ReusableSteps:280 - Verify whether Choose Options page is getting displayed or not
-2018-04-09 12:31:57 INFO  ReusableSteps:290 - Click On Server Requested LookUP
-2018-04-09 12:31:58 INFO  BaseUtil:94 - Switch to MainFrame
-2018-04-09 12:31:59 INFO  Hook:79 - Chrome Browser Launched Successfully
+2018-04-10 23:59:54 INFO  Hook:59 - Chrome Browser Launched Successfully
+2018-04-11 00:00:08 INFO  BaseUtil:62 - Enter CNet URL in the address bar of the browser
+2018-04-11 00:00:08 INFO  BaseUtil:93 - Switch to MainFrame
+2018-04-11 00:00:11 INFO  BaseUtil:110 - Entered Username
+2018-04-11 00:00:13 INFO  BaseUtil:116 - Entered Password
+2018-04-11 00:00:15 INFO  BaseUtil:120 - Clicked on Login Button
+2018-04-11 00:00:30 INFO  ReusableSteps:77 - Enter value in filter navigation
+2018-04-11 00:00:33 INFO  ReusableSteps:86 - Click on Service Catalog Order Guides Link
+2018-04-11 00:00:40 INFO  BaseUtil:93 - Switch to MainFrame
+2018-04-11 00:00:45 INFO  ReusableSteps:97 - Click on End To End Deployment
+2018-04-11 00:00:49 INFO  ReusableSteps:106 - Verify whether Try It button is enabled or not
+2018-04-11 00:00:50 INFO  ReusableSteps:115 - Click on Try It
+2018-04-11 00:00:55 INFO  ReusableSteps:124 - Verify whether Describe Needs page is getting displayed or not
+2018-04-11 00:00:57 INFO  ReusableSteps:133 - Click On Project LookUP
+2018-04-11 00:01:02 INFO  BaseUtil:138 - Switch to Multiple Window and Select Text as :PRJ0010001
+2018-04-11 00:01:02 INFO  BaseUtil:93 - Switch to MainFrame
+2018-04-11 00:01:05 INFO  ReusableSteps:143 - Select Environment Information as :Create Environment - New
+2018-04-11 00:01:08 INFO  ReusableSteps:159 - Select Type of Environment as :Development
+2018-04-11 00:01:09 INFO  ReusableSteps:167 - Select Environment Name as :Environment Name
+2018-04-11 00:01:12 INFO  ReusableSteps:175 - Click On Cloud Platform
+2018-04-11 00:01:16 INFO  BaseUtil:138 - Switch to Multiple Window and Select Text as :AWS_New York
+2018-04-11 00:01:17 INFO  BaseUtil:93 - Switch to MainFrame
+2018-04-11 00:01:20 INFO  ReusableSteps:185 - Select Existing Key Pair Checkbox
+2018-04-11 00:01:22 INFO  ReusableSteps:194 - Click On Select Key Pair
+2018-04-11 00:01:26 INFO  BaseUtil:138 - Switch to Multiple Window and Select Text as :qa
+2018-04-11 00:01:26 INFO  BaseUtil:93 - Switch to MainFrame
+2018-04-11 00:01:29 INFO  ReusableSteps:204 - Select WebServer Checkbox
+2018-04-11 00:01:32 INFO  ReusableSteps:214 - Select Webserver Type as :Yes
+2018-04-11 00:01:35 INFO  ReusableSteps:224 - Select Container Platform as :Kubernetes
+2018-04-11 00:01:38 INFO  ReusableSteps:266 - Select Application Type as :JAVA
+2018-04-11 00:01:42 INFO  ReusableSteps:235 - Select Database Server Checkbox
+2018-04-11 00:01:45 INFO  ReusableSteps:245 - Select Database Type as :Yes
+2018-04-11 00:01:48 INFO  ReusableSteps:256 - Select Database Container Platform as :Kubernetes
+2018-04-11 00:01:50 INFO  ReusableSteps:275 - Click on Choose Options
+2018-04-11 00:01:52 INFO  ReusableSteps:286 - Verify whether Choose Options page is getting displayed or not
+2018-04-11 00:02:00 INFO  ReusableSteps:296 - Click On Server Requested LookUP
+2018-04-11 00:02:05 INFO  BaseUtil:138 - Switch to Multiple Window and Select Text as :Weblogic
+2018-04-11 00:02:05 INFO  BaseUtil:93 - Switch to MainFrame
+2018-04-11 00:02:07 INFO  ReusableSteps:305 - Enter Cluster Name as :Cluster Name
+2018-04-11 00:02:10 INFO  ReusableSteps:362 - Click On Server Size LookUP
+2018-04-11 00:02:15 INFO  BaseUtil:138 - Switch to Multiple Window and Select Text as :t2.medium
+2018-04-11 00:02:15 INFO  BaseUtil:93 - Switch to MainFrame
+2018-04-11 00:02:18 INFO  ReusableSteps:372 - Select Additional Storage as :YesandS3andEC2Mount NameandBucket Name
+2018-04-11 00:02:18 INFO  ReusableSteps:377 - Select Additional Storage as :Yes
+2018-04-11 00:02:30 INFO  ReusableSteps:398 - Select Monitoring Information as :Yes
+2018-04-11 00:02:33 INFO  ReusableSteps:407 - Select Auto Scaling as :Yes
+2018-04-11 00:02:36 INFO  ReusableSteps:315 - Select Existing Network Checkbox
+2018-04-11 00:02:38 INFO  ReusableSteps:324 - Click On Select Network
+2018-04-11 00:02:44 INFO  BaseUtil:138 - Switch to Multiple Window and Select Text as :vpc-f7c3d993
+2018-04-11 00:02:45 INFO  BaseUtil:93 - Switch to MainFrame
+2018-04-11 00:02:48 INFO  ReusableSteps:333 - Select Security Group Checkbox
+2018-04-11 00:02:52 INFO  ReusableSteps:343 - Click On Security Group
+2018-04-11 00:02:56 INFO  BaseUtil:138 - Switch to Multiple Window and Select Text as :test
+2018-04-11 00:02:56 INFO  BaseUtil:93 - Switch to MainFrame
+2018-04-11 00:02:59 INFO  ReusableSteps:353 - Click On Operating System LookUP
+2018-04-11 00:03:03 INFO  BaseUtil:138 - Switch to Multiple Window and Select Text as :RHEL 7
+2018-04-11 00:03:03 INFO  BaseUtil:93 - Switch to MainFrame
+2018-04-11 00:03:11 INFO  ReusableSteps:417 - Click On Next Tab
+2018-04-11 00:03:15 INFO  ReusableSteps:468 - Click On Database Service Requested LookUP
+2018-04-11 00:03:19 INFO  BaseUtil:138 - Switch to Multiple Window and Select Text as :Oracle
+2018-04-11 00:03:19 INFO  BaseUtil:93 - Switch to MainFrame
+2018-04-11 00:03:21 INFO  ReusableSteps:477 - Enter Database Cluster Name as :Cluster Name
+2018-04-11 00:03:23 INFO  ReusableSteps:428 - Select Database Network Configuration Checkbox
+2018-04-11 00:03:26 INFO  ReusableSteps:437 - Click On Database Network Configuration Group
+2018-04-11 00:03:30 INFO  BaseUtil:138 - Switch to Multiple Window and Select Text as :vpc-f7c3d993
+2018-04-11 00:03:31 INFO  BaseUtil:93 - Switch to MainFrame
+2018-04-11 00:03:34 INFO  ReusableSteps:448 - Select Database Security Group Checkbox
+2018-04-11 00:03:36 INFO  ReusableSteps:458 - Click On Database Security Group
+2018-04-11 00:03:41 INFO  BaseUtil:138 - Switch to Multiple Window and Select Text as :test
+2018-04-11 00:03:41 INFO  BaseUtil:93 - Switch to MainFrame
+2018-04-11 00:03:43 INFO  ReusableSteps:488 - Click On Database Operating System LookUP
+2018-04-11 00:03:47 INFO  BaseUtil:138 - Switch to Multiple Window and Select Text as :RHEL 7
+2018-04-11 00:03:47 INFO  BaseUtil:93 - Switch to MainFrame
+2018-04-11 00:03:55 INFO  ReusableSteps:417 - Click On Next Tab
+2018-04-11 00:03:57 INFO  ReusableSteps:497 - Click On Check Out
+2018-04-11 00:04:07 INFO  ReusableSteps:509 - Verify whether Shopping Cart page is getting displayed or not
+2018-04-11 00:04:09 INFO  ReusableSteps:519 - Click on Order Now
+2018-04-11 00:04:20 INFO  ReusableSteps:529 - Validate Successful Message is displayed or not
+2018-04-11 00:04:21 INFO  ReusableSteps:539 - Get the Request Number after created :REQ0010559
+2018-04-11 00:04:23 INFO  ReusableSteps:549 - Click On Recently Created Requested Number
+2018-04-11 00:04:29 INFO  ReusableSteps:564 - Number of RITM Numbers are :3
+2018-04-11 00:04:34 INFO  ReusableSteps:574 - Click on RITM Number and Approve them for the Request Created as: RITM0011385
+2018-04-11 00:05:38 INFO  ReusableSteps:574 - Click on RITM Number and Approve them for the Request Created as: RITM0011384
+2018-04-11 00:06:39 INFO  ReusableSteps:574 - Click on RITM Number and Approve them for the Request Created as: RITM0011383
+2018-04-11 00:07:34 INFO  BaseUtil:181 - Switch to Multiple Window
+2018-04-11 00:07:38 INFO  ReusableSteps:631 - Search Request in a CMDB Table as :cmdb_ci_server.list
+2018-04-11 00:07:41 INFO  BaseUtil:158 - Click on User Menu Dropdown
+2018-04-11 00:07:46 INFO  BaseUtil:165 - Click on Logout
+2018-04-11 00:07:47 INFO  Hook:79 - Chrome Browser Launched Successfully
+2018-04-11 00:07:54 INFO  Hook:59 - Chrome Browser Launched Successfully
+2018-04-11 00:08:02 INFO  BaseUtil:62 - Enter CNet URL in the address bar of the browser
+2018-04-11 00:08:03 INFO  BaseUtil:93 - Switch to MainFrame
+2018-04-11 00:08:05 INFO  BaseUtil:110 - Entered Username
+2018-04-11 00:08:07 INFO  BaseUtil:116 - Entered Password
+2018-04-11 00:08:09 INFO  BaseUtil:120 - Clicked on Login Button
+2018-04-11 00:08:26 INFO  ReusableSteps:77 - Enter value in filter navigation
+2018-04-11 00:08:31 INFO  ReusableSteps:86 - Click on Service Catalog Order Guides Link
+2018-04-11 00:08:34 INFO  BaseUtil:93 - Switch to MainFrame
+2018-04-11 00:08:41 INFO  ReusableSteps:97 - Click on End To End Deployment
+2018-04-11 00:08:45 INFO  ReusableSteps:106 - Verify whether Try It button is enabled or not
+2018-04-11 00:08:51 INFO  ReusableSteps:115 - Click on Try It
+2018-04-11 00:08:56 INFO  ReusableSteps:124 - Verify whether Describe Needs page is getting displayed or not
+2018-04-11 00:08:58 INFO  ReusableSteps:133 - Click On Project LookUP
+2018-04-11 00:09:03 INFO  BaseUtil:138 - Switch to Multiple Window and Select Text as :PRJ0010001
+2018-04-11 00:09:03 INFO  BaseUtil:93 - Switch to MainFrame
+2018-04-11 00:09:06 INFO  ReusableSteps:143 - Select Environment Information as :Create Environment - New
+2018-04-11 00:09:09 INFO  ReusableSteps:159 - Select Type of Environment as :Development
+2018-04-11 00:09:10 INFO  ReusableSteps:167 - Select Environment Name as :Environment Name
+2018-04-11 00:09:13 INFO  ReusableSteps:175 - Click On Cloud Platform
+2018-04-11 00:09:17 INFO  BaseUtil:138 - Switch to Multiple Window and Select Text as :AWS_New York
+2018-04-11 00:09:17 INFO  BaseUtil:93 - Switch to MainFrame
+2018-04-11 00:09:21 INFO  ReusableSteps:185 - Select Existing Key Pair Checkbox
+2018-04-11 00:09:23 INFO  ReusableSteps:194 - Click On Select Key Pair
+2018-04-11 00:09:27 INFO  BaseUtil:138 - Switch to Multiple Window and Select Text as :qa
+2018-04-11 00:09:27 INFO  BaseUtil:93 - Switch to MainFrame
+2018-04-11 00:09:30 INFO  ReusableSteps:204 - Select WebServer Checkbox
+2018-04-11 00:09:33 INFO  ReusableSteps:214 - Select Webserver Type as :Yes
+2018-04-11 00:09:36 INFO  ReusableSteps:224 - Select Container Platform as :Kubernetes
+2018-04-11 00:09:39 INFO  ReusableSteps:266 - Select Application Type as :JAVA
+2018-04-11 00:09:42 INFO  ReusableSteps:275 - Click on Choose Options
+2018-04-11 00:09:43 INFO  ReusableSteps:286 - Verify whether Choose Options page is getting displayed or not
+2018-04-11 00:09:50 INFO  ReusableSteps:296 - Click On Server Requested LookUP
+2018-04-11 00:09:55 INFO  BaseUtil:138 - Switch to Multiple Window and Select Text as :Weblogic
+2018-04-11 00:09:55 INFO  BaseUtil:93 - Switch to MainFrame
+2018-04-11 00:09:59 INFO  ReusableSteps:362 - Click On Server Size LookUP
+2018-04-11 00:10:03 INFO  BaseUtil:138 - Switch to Multiple Window and Select Text as :t2.medium
+2018-04-11 00:10:03 INFO  BaseUtil:93 - Switch to MainFrame
+2018-04-11 00:10:06 INFO  ReusableSteps:372 - Select Additional Storage as :YesandS3andEC2Mount NameandBucket Name
+2018-04-11 00:10:06 INFO  ReusableSteps:377 - Select Additional Storage as :Yes
+2018-04-11 00:10:18 INFO  ReusableSteps:398 - Select Monitoring Information as :Yes
+2018-04-11 00:10:21 INFO  ReusableSteps:407 - Select Auto Scaling as :Yes
+2018-04-11 00:10:23 INFO  ReusableSteps:305 - Enter Cluster Name as :Cluster Name
+2018-04-11 00:10:25 INFO  ReusableSteps:315 - Select Existing Network Checkbox
+2018-04-11 00:10:28 INFO  ReusableSteps:324 - Click On Select Network
+2018-04-11 00:10:33 INFO  BaseUtil:138 - Switch to Multiple Window and Select Text as :vpc-f7c3d993
+2018-04-11 00:10:33 INFO  BaseUtil:93 - Switch to MainFrame
+2018-04-11 00:10:36 INFO  ReusableSteps:333 - Select Security Group Checkbox
+2018-04-11 00:10:40 INFO  ReusableSteps:343 - Click On Security Group
+2018-04-11 00:10:44 INFO  BaseUtil:138 - Switch to Multiple Window and Select Text as :test
+2018-04-11 00:10:44 INFO  BaseUtil:93 - Switch to MainFrame
+2018-04-11 00:10:47 INFO  ReusableSteps:353 - Click On Operating System LookUP
+2018-04-11 00:10:51 INFO  BaseUtil:138 - Switch to Multiple Window and Select Text as :RHEL 7
+2018-04-11 00:10:51 INFO  BaseUtil:93 - Switch to MainFrame
+2018-04-11 00:10:58 INFO  ReusableSteps:417 - Click On Next Tab
+2018-04-11 00:11:00 INFO  ReusableSteps:497 - Click On Check Out
+2018-04-11 00:11:10 INFO  ReusableSteps:509 - Verify whether Shopping Cart page is getting displayed or not
+2018-04-11 00:11:12 INFO  ReusableSteps:519 - Click on Order Now
+2018-04-11 00:11:20 INFO  ReusableSteps:529 - Validate Successful Message is displayed or not
+2018-04-11 00:11:22 INFO  ReusableSteps:539 - Get the Request Number after created :REQ0010560
+2018-04-11 00:11:24 INFO  ReusableSteps:549 - Click On Recently Created Requested Number
+2018-04-11 00:11:29 INFO  ReusableSteps:564 - Number of RITM Numbers are :2
+2018-04-11 00:11:34 INFO  ReusableSteps:574 - Click on RITM Number and Approve them for the Request Created as: RITM0011387
+2018-04-11 00:12:29 INFO  ReusableSteps:574 - Click on RITM Number and Approve them for the Request Created as: RITM0011386
+2018-04-11 00:13:30 INFO  BaseUtil:181 - Switch to Multiple Window
+2018-04-11 00:13:34 INFO  ReusableSteps:631 - Search Request in a CMDB Table as :cmdb_ci_server.list
+2018-04-11 00:13:37 INFO  BaseUtil:158 - Click on User Menu Dropdown
+2018-04-11 00:13:43 INFO  BaseUtil:165 - Click on Logout
+2018-04-11 00:13:45 INFO  Hook:79 - Chrome Browser Launched Successfully
+2018-04-11 00:13:50 INFO  Hook:59 - Chrome Browser Launched Successfully
+2018-04-11 00:13:59 INFO  BaseUtil:62 - Enter CNet URL in the address bar of the browser
+2018-04-11 00:13:59 INFO  BaseUtil:93 - Switch to MainFrame
+2018-04-11 00:14:01 INFO  BaseUtil:110 - Entered Username
+2018-04-11 00:14:03 INFO  BaseUtil:116 - Entered Password
+2018-04-11 00:14:05 INFO  BaseUtil:120 - Clicked on Login Button
+2018-04-11 00:14:23 INFO  ReusableSteps:77 - Enter value in filter navigation
+2018-04-11 00:14:26 INFO  ReusableSteps:86 - Click on Service Catalog Order Guides Link
+2018-04-11 00:14:27 INFO  BaseUtil:93 - Switch to MainFrame
+2018-04-11 00:14:32 INFO  ReusableSteps:97 - Click on End To End Deployment
+2018-04-11 00:14:40 INFO  ReusableSteps:106 - Verify whether Try It button is enabled or not
+2018-04-11 00:14:45 INFO  ReusableSteps:115 - Click on Try It
+2018-04-11 00:14:50 INFO  ReusableSteps:124 - Verify whether Describe Needs page is getting displayed or not
+2018-04-11 00:14:53 INFO  ReusableSteps:133 - Click On Project LookUP
+2018-04-11 00:14:57 INFO  BaseUtil:138 - Switch to Multiple Window and Select Text as :PRJ0010006
+2018-04-11 00:14:57 INFO  BaseUtil:93 - Switch to MainFrame
+2018-04-11 00:15:00 INFO  ReusableSteps:143 - Select Environment Information as :Create Environment - New
+2018-04-11 00:15:03 INFO  ReusableSteps:159 - Select Type of Environment as :Testing
+2018-04-11 00:15:04 INFO  ReusableSteps:167 - Select Environment Name as :Environment Name
+2018-04-11 00:15:07 INFO  ReusableSteps:175 - Click On Cloud Platform
+2018-04-11 00:15:11 INFO  BaseUtil:138 - Switch to Multiple Window and Select Text as :AWS_NY_LA_Z01_F10
+2018-04-11 00:15:11 INFO  BaseUtil:93 - Switch to MainFrame
+2018-04-11 00:15:14 INFO  ReusableSteps:185 - Select Existing Key Pair Checkbox
+2018-04-11 00:15:17 INFO  ReusableSteps:194 - Click On Select Key Pair
+2018-04-11 00:15:20 INFO  BaseUtil:138 - Switch to Multiple Window and Select Text as :qa
+2018-04-11 00:15:20 INFO  BaseUtil:93 - Switch to MainFrame
+2018-04-11 00:15:23 INFO  ReusableSteps:235 - Select Database Server Checkbox
+2018-04-11 00:15:27 INFO  ReusableSteps:245 - Select Database Type as :Yes
+2018-04-11 00:15:30 INFO  ReusableSteps:256 - Select Database Container Platform as :Kubernetes
+2018-04-11 00:15:32 INFO  ReusableSteps:275 - Click on Choose Options
+2018-04-11 00:15:34 INFO  ReusableSteps:286 - Verify whether Choose Options page is getting displayed or not
+2018-04-11 00:15:40 INFO  ReusableSteps:468 - Click On Database Service Requested LookUP
+2018-04-11 00:15:44 INFO  BaseUtil:138 - Switch to Multiple Window and Select Text as :Oracle
+2018-04-11 00:15:44 INFO  BaseUtil:93 - Switch to MainFrame
+2018-04-11 00:15:46 INFO  ReusableSteps:477 - Enter Database Cluster Name as :Cluster Name
+2018-04-11 00:15:50 INFO  ReusableSteps:372 - Select Additional Storage as :YesandS3andEC2Mount NameandBucket Name
+2018-04-11 00:15:50 INFO  ReusableSteps:377 - Select Additional Storage as :Yes
+2018-04-11 00:16:02 INFO  ReusableSteps:398 - Select Monitoring Information as :Yes
+2018-04-11 00:16:05 INFO  ReusableSteps:407 - Select Auto Scaling as :Yes
+2018-04-11 00:16:07 INFO  ReusableSteps:428 - Select Database Network Configuration Checkbox
+2018-04-11 00:16:11 INFO  ReusableSteps:437 - Click On Database Network Configuration Group
+2018-04-11 00:16:15 INFO  BaseUtil:138 - Switch to Multiple Window and Select Text as :vpc-f7c3d993
+2018-04-11 00:16:15 INFO  BaseUtil:93 - Switch to MainFrame
+2018-04-11 00:16:19 INFO  ReusableSteps:448 - Select Database Security Group Checkbox
+2018-04-11 00:16:21 INFO  ReusableSteps:458 - Click On Database Security Group
+2018-04-11 00:16:25 INFO  BaseUtil:138 - Switch to Multiple Window and Select Text as :test
+2018-04-11 00:16:26 INFO  BaseUtil:93 - Switch to MainFrame
+2018-04-11 00:16:28 INFO  ReusableSteps:488 - Click On Database Operating System LookUP
+2018-04-11 00:16:32 INFO  BaseUtil:138 - Switch to Multiple Window and Select Text as :RHEL 7
+2018-04-11 00:16:32 INFO  BaseUtil:93 - Switch to MainFrame
+2018-04-11 00:16:35 INFO  ReusableSteps:497 - Click On Check Out
+2018-04-11 00:16:44 INFO  ReusableSteps:509 - Verify whether Shopping Cart page is getting displayed or not
+2018-04-11 00:16:46 INFO  ReusableSteps:519 - Click on Order Now
+2018-04-11 00:16:54 INFO  ReusableSteps:529 - Validate Successful Message is displayed or not
+2018-04-11 00:16:56 INFO  ReusableSteps:539 - Get the Request Number after created :REQ0010561
+2018-04-11 00:16:58 INFO  ReusableSteps:549 - Click On Recently Created Requested Number
+2018-04-11 00:17:04 INFO  ReusableSteps:564 - Number of RITM Numbers are :1
+2018-04-11 00:17:09 INFO  ReusableSteps:574 - Click on RITM Number and Approve them for the Request Created as: RITM0011388
+2018-04-11 00:18:11 INFO  BaseUtil:181 - Switch to Multiple Window
+2018-04-11 00:18:15 INFO  ReusableSteps:631 - Search Request in a CMDB Table as :cmdb_ci_server.list
+2018-04-11 00:18:18 INFO  BaseUtil:158 - Click on User Menu Dropdown
+2018-04-11 00:18:24 INFO  BaseUtil:165 - Click on Logout
+2018-04-11 00:18:25 INFO  Hook:79 - Chrome Browser Launched Successfully

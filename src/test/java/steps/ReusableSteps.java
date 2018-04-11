@@ -1,6 +1,5 @@
 package steps;
 
-import java.awt.AWTException;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -123,7 +122,7 @@ public class ReusableSteps extends BaseUtil {
 	}
 
 	@Then("^Switch to Multiple Window and Select Text as \"([^\"]*)\"$")
-	public void HandleMultipleWindows(String lookupValue) throws IOException, InterruptedException, AWTException {
+	public void HandleMultipleWindows(String lookupValue) throws IOException, InterruptedException {
 		try {
 			String mainWindow = base.driver.getWindowHandle();
 			String windowTitle = base.driver.getTitle();
@@ -135,23 +134,20 @@ public class ReusableSteps extends BaseUtil {
 						WebDriverWait wait = new WebDriverWait(base.driver, 10);
 						wait.until(ExpectedConditions.elementToBeClickable(By.linkText(lookupValue)));
 						base.driver.findElement(By.linkText(lookupValue)).click();
+						Thread.sleep(1500);
 						logger.info("Switch to Multiple Window and Select Text as :" + lookupValue);
 					} catch (NoSuchElementException exc) {
 						exc.printStackTrace();
-						Abstract.screenshotcapture();
 					} catch (WebDriverException e) {
 						e.printStackTrace();
-						Abstract.screenshotcapture();
 					}
 				}
 			}
 			base.driver.switchTo().window(mainWindow);
 		} catch (NoSuchElementException exc) {
 			exc.printStackTrace();
-			Abstract.screenshotcapture();
 		} catch (WebDriverException e) {
 			e.printStackTrace();
-			Abstract.screenshotcapture();
 		}
 	}
 
@@ -170,7 +166,7 @@ public class ReusableSteps extends BaseUtil {
 	}
 
 	@Then("^Switch to Multiple Window$")
-	public void switchToMultipleWindow() throws IOException, InterruptedException, AWTException {
+	public void switchToMultipleWindow() throws IOException, InterruptedException {
 		try {
 			String mainWindow = base.driver.getWindowHandle();
 			String windowTitle = base.driver.getTitle();
@@ -178,16 +174,15 @@ public class ReusableSteps extends BaseUtil {
 			for (String currentWindowHandle : allWindowHandles) {
 				if (!currentWindowHandle.equals(mainWindow)) {
 					base.driver.switchTo().window(currentWindowHandle);
+					Thread.sleep(1500);
 				}
 			}
 			base.driver.switchTo().window(mainWindow);
 			logger.info("Switch to Multiple Window");
 		} catch (NoSuchElementException exc) {
 			exc.printStackTrace();
-			Abstract.screenshotcapture();
 		} catch (WebDriverException e) {
 			e.printStackTrace();
-			Abstract.screenshotcapture();
 		}
 	}
 

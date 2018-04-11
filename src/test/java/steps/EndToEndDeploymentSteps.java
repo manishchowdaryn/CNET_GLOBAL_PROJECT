@@ -6,12 +6,12 @@ import java.awt.AWTException;
 import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.UnhandledAlertException;
-import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
@@ -30,7 +30,7 @@ import reusableFunction.Abstract;
 public class EndToEndDeploymentSteps extends BaseUtil {
 
 	private static final Logger logger = Logger.getLogger(ReusableSteps.class.getName());
-	
+
 	public BaseUtil base;
 	public Login Login;
 	public Logout Logout;
@@ -64,7 +64,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 		// Thread.sleep(10000);
 		String homePageTitle = base.driver.getTitle();
 		assertEquals("Home page loading... | ServiceNow", homePageTitle);
-		logger.info("Verify whether Home page is correctly opened or not");
+		logger.info("Display Homepage ");
 
 	}
 
@@ -75,7 +75,6 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 		searchFilter.clear();
 		searchFilter.sendKeys(searchFilterValue);
 		logger.info("Enter value in filter navigation");
-
 
 	}
 
@@ -89,7 +88,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 		serviceCatalogOrderGuide.click();
 
 	}
-	
+
 	@When("^Click on End To End Deployment$")
 	public void click_On_End_To_End_Deployment() throws Throwable {
 
@@ -157,7 +156,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 		WebElement typeOfEnvironment = Abstract.waitUntilConditionSatisfy(base, DescribeNeeds.typeOfEnvironment());
 		Abstract.selectTheDropDownList(base, typeOfEnvironment, typeofEnvironmentValue);
-		logger.info("Select Type of Environment as :"+ typeofEnvironmentValue );
+		logger.info("Select Type of Environment as :" + typeofEnvironmentValue);
 
 	}
 
@@ -181,6 +180,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 	public void select_Existing_Key_Pair() throws Throwable {
 
 		WebElement existingKeyPairElement = Abstract.waitUntilConditionSatisfy(base, DescribeNeeds.existingKeyPair());
+		Abstract.scrolldown(base);
 		existingKeyPairElement.click();
 		logger.info("Select Existing Key Pair Checkbox");
 
@@ -199,22 +199,25 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 	public void select_WebServer() throws Throwable {
 
 		WebElement webServerCheckbox = Abstract.waitUntilConditionSatisfy(base, DescribeNeeds.webserverChecbox());
+		Abstract.scrolldown(base);
 		webServerCheckbox.click();
 		logger.info("Select WebServer Checkbox");
 
 	}
 
 	@When("^Select Webserver Type as \"([^\"]*)\"$")
-	public void select_webServer_Type(String webserverTypeValue) throws IOException, AWTException {
+	public void select_webServer_Type(String webserverTypeValue)
+			throws IOException, AWTException, InterruptedException {
 
 		WebElement webserverType = Abstract.waitUntilConditionSatisfy(base, DescribeNeeds.webserverType());
 		Abstract.selectTheDropDownList(base, webserverType, webserverTypeValue);
-		logger.info("Select Webserver Type as :" + webserverTypeValue );
+		logger.info("Select Webserver Type as :" + webserverTypeValue);
 
 	}
 
 	@When("^Select Container Platform as \"([^\"]*)\"$")
-	public void select_Container_Platform(String containerPlatformValue) throws IOException, AWTException {
+	public void select_Container_Platform(String containerPlatformValue)
+			throws IOException, AWTException, InterruptedException {
 
 		WebElement containerPlatform = Abstract.waitUntilConditionSatisfy(base, DescribeNeeds.containerPlatform());
 		Abstract.selectTheDropDownList(base, containerPlatform, containerPlatformValue);
@@ -227,37 +230,40 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 		WebElement databaseServerCheckbox = Abstract.waitUntilConditionSatisfy(base,
 				DescribeNeeds.databaseserverChecbox());
+		Abstract.scrolldown(base);
 		databaseServerCheckbox.click();
 		logger.info("Select Database Server Checkbox");
 
 	}
 
 	@When("^Select Database Type as \"([^\"]*)\"$")
-	public void select_Database_Type(String databaseserverTypeValue) throws IOException, AWTException {
+	public void select_Database_Type(String databaseserverTypeValue)
+			throws IOException, AWTException, InterruptedException {
 
 		WebElement databaseServerType = Abstract.waitUntilConditionSatisfy(base, DescribeNeeds.databaseserverType());
 		Abstract.selectTheDropDownList(base, databaseServerType, databaseserverTypeValue);
-		logger.info("Select Database Type as :"+databaseserverTypeValue);
+		logger.info("Select Database Type as :" + databaseserverTypeValue);
 
 	}
 
 	@When("^Select Database Container Platform as \"([^\"]*)\"$")
 	public void select_Database_Container_Platform(String databasecontainerPlatformValue)
-			throws IOException, AWTException {
+			throws IOException, AWTException, InterruptedException {
 
 		WebElement databasecontainerPlatform = Abstract.waitUntilConditionSatisfy(base,
 				DescribeNeeds.databasecontainerPlatform());
 		Abstract.selectTheDropDownList(base, databasecontainerPlatform, databasecontainerPlatformValue);
-		logger.info("Select Database Container Platform as :"+ databasecontainerPlatformValue);
+		logger.info("Select Database Container Platform as :" + databasecontainerPlatformValue);
 
 	}
 
 	@When("^Select Application Type as \"([^\"]*)\"$")
-	public void select_Application_Type(String applicationTypeValue) throws IOException, AWTException {
+	public void select_Application_Type(String applicationTypeValue)
+			throws IOException, AWTException, InterruptedException {
 
 		WebElement applicationType = Abstract.waitUntilConditionSatisfy(base, DescribeNeeds.applicationType());
 		Abstract.selectTheDropDownList(base, applicationType, applicationTypeValue);
-		logger.info("Select Application Type as :"+applicationTypeValue);
+		logger.info("Select Application Type as :" + applicationTypeValue);
 
 	}
 
@@ -269,14 +275,14 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 		logger.info("Click on Choose Options");
 
 	}
-	
+
 	@Then("^Verify whether Choose Options page is getting displayed or not$")
 	public void verifyChooseOptions() throws Throwable {
 
 		WebElement chooseOptions = Abstract.waitUntilConditionSatisfy(base, ChooseOptions.chooseOptions());
+		base.driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 		String chooseOptionsText = chooseOptions.getText();
 		assertEquals(chooseOptionsText, "Choose Options");
-		Thread.sleep(5000);
 		logger.info("Verify whether Choose Options page is getting displayed or not");
 
 	}
@@ -296,7 +302,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 		ChooseOptions.clusterName().clear();
 		ChooseOptions.clusterName().sendKeys(clusterNameValue);
-		logger.info("Enter Cluster Name as :"+clusterNameValue);
+		logger.info("Enter Cluster Name as :" + clusterNameValue);
 
 	}
 
@@ -322,6 +328,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 	public void select_Security_Group_Checkbox() throws Throwable {
 
 		WebElement securityGroup = Abstract.waitUntilConditionSatisfy(base, ChooseOptions.securityGroup());
+		Abstract.scrolldown(base);
 		securityGroup.click();
 		logger.info("Select Security Group Checkbox");
 
@@ -331,6 +338,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 	public void click_On_Security_Group() throws Throwable {
 
 		WebElement securityGroupLookUp = Abstract.waitUntilConditionSatisfy(base, ChooseOptions.securityGroupLookUp());
+		Abstract.scrolldown(base);
 		securityGroupLookUp.click();
 		logger.info("Click On Security Group");
 
@@ -354,19 +362,20 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 		logger.info("Click On Server Size LookUP");
 
 	}
-	
+
 	@When("^Select Additional Storage as \"([^\"]*)\" and \"([^\"]*)\"  and \"([^\"]*)\"  and \"([^\"]*)\"$")
 	public void select_Additional_Storage_as_and_and_and(String storageType, String typeofStorage, String EC2MountPath,
 			String bucketName) throws Throwable {
 		WebElement storageTypeVar = Abstract.waitUntilConditionSatisfy(base, ChooseOptions.storageType());
 		Abstract.selectTheDropDownList(base, storageTypeVar, storageType);
 
-		logger.info("Select Additional Storage as :"+ storageType + "and" + typeofStorage + "and"+ EC2MountPath + "and"+bucketName);
-		
+		logger.info("Select Additional Storage as :" + storageType + "and" + typeofStorage + "and" + EC2MountPath
+				+ "and" + bucketName);
+
 		if (storageType.equalsIgnoreCase("Yes")) {
 
-			logger.info("Select Additional Storage as :"+ storageType);
-					
+			logger.info("Select Additional Storage as :" + storageType);
+
 			WebElement typeofStorageVar = Abstract.waitUntilConditionSatisfy(base, ChooseOptions.typeofStorage());
 			Abstract.selectTheDropDownList(base, typeofStorageVar, typeofStorage);
 
@@ -375,18 +384,19 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 			WebElement bucketNameVar = Abstract.waitUntilConditionSatisfy(base, ChooseOptions.bucketName());
 			bucketNameVar.sendKeys(bucketName);
-			
-			}
-		
+
+		}
+
 	}
 
 	@When("Select Monitoring Information as \"([^\"]*)\"$")
 	public void select_Monitoring_Information_as(String monitoringInformation) throws Exception {
 
-		WebElement monitoringInformationVar = Abstract.waitUntilConditionSatisfy(base, ChooseOptions.monitoringInformationLoc());
+		WebElement monitoringInformationVar = Abstract.waitUntilConditionSatisfy(base,
+				ChooseOptions.monitoringInformationLoc());
 		Abstract.selectTheDropDownList(base, monitoringInformationVar, monitoringInformation);
-		logger.info("Select Monitoring Information as :"+monitoringInformation);
-		
+		logger.info("Select Monitoring Information as :" + monitoringInformation);
+
 	}
 
 	@When("Select Auto Scaling as \"([^\"]*)\"$")
@@ -394,13 +404,9 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 		WebElement autoScalingTypeVar = Abstract.waitUntilConditionSatisfy(base, ChooseOptions.autoScaling());
 		Abstract.selectTheDropDownList(base, autoScalingTypeVar, autoScalingType);
-		logger.info("Select Auto Scaling as :"+autoScalingType);
+		logger.info("Select Auto Scaling as :" + autoScalingType);
 
 	}
-	
-	
-	
-	
 
 	@When("^Click On Next Tab$")
 	public void click_On_Next_Tab() throws Throwable {
@@ -437,6 +443,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 		WebElement databaseSecurityGroup = Abstract.waitUntilConditionSatisfy(base,
 				ChooseOptions.databaseSecurityGroup());
+		Abstract.scrolldown(base);
 		databaseSecurityGroup.click();
 		logger.info("Select Database Security Group Checkbox");
 
@@ -467,10 +474,9 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 		ChooseOptions.databaseClusterName().clear();
 		ChooseOptions.databaseClusterName().sendKeys(databaseClusterNameValue);
-		logger.info("Enter Database Cluster Name as :"+databaseClusterNameValue);
+		logger.info("Enter Database Cluster Name as :" + databaseClusterNameValue);
 
 	}
-
 
 	@When("^Click On Database Operating System LookUP$")
 	public void click_On_Database_Operating_System() throws Throwable {
@@ -478,6 +484,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 		WebElement databaseOperatingSystemLookUp = Abstract.waitUntilConditionSatisfy(base,
 				ChooseOptions.databaseOperatingSystemLookUp());
 		databaseOperatingSystemLookUp.click();
+		base.driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 		logger.info("Click On Database Operating System LookUP");
 
 	}
@@ -488,7 +495,8 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 		WebElement checkOut = Abstract.waitUntilConditionSatisfy(base, ChooseOptions.checkOut());
 		checkOut.click();
 		logger.info("Click On Check Out");
-		Thread.sleep(5000);
+		base.driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+		Thread.sleep(8000);
 
 	}
 
@@ -507,6 +515,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 		WebElement orderNow = Abstract.waitUntilConditionSatisfy(base, ChooseOptions.orderNow());
 		orderNow.click();
+		base.driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 		logger.info("Click on Order Now");
 
 	}
@@ -527,7 +536,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 		WebElement requestNumber = Abstract.waitUntilConditionSatisfy(base, ChooseOptions.getRequestNumber());
 		String requestNumberValue = requestNumber.getText();
 		System.out.println(requestNumberValue);
-		logger.info("Get the Request Number after created :"+requestNumberValue );
+		logger.info("Get the Request Number after created :" + requestNumberValue);
 
 	}
 
@@ -536,18 +545,17 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 		WebElement requestNumber = Abstract.waitUntilConditionSatisfy(base, ChooseOptions.getRequestNumber());
 		requestNumber.click();
+		base.driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 		logger.info("Click On Recently Created Requested Number");
 
 	}
-
 	@When("^Click on RITM Numbers and Approve all RITM Numbers for the Request Created$")
 	public void click_RITM_Numbers() throws Throwable {
 
 		Thread.sleep(5000);
 
-		try {
-		//WebElement ritmNumber = Abstract.waitUntilConditionSatisfy(base, RequestProcess.RITMNumbers();
-		
+		//WebElement ritmNumber = Abstract.waitUntilConditionSatisfy(base, RequestProcess.RITMNumbers());
+
 		List<WebElement> ritmNumberValue = base.driver.findElements(By.xpath(
 				"html/body/div[2]/div[2]/div/div[1]/span/div[2]/div[4]/table[1]/tbody/tr/td/div/table/tbody/tr/td[3]/a"));
 		
@@ -597,7 +605,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 			}
 
-			logger.info("RITM Number "+ ritmLinkText.getText() + "are approved successfully");
+			//logger.info("RITM Number "+ ritmLinkText.getText() + "are approved successfully");
 			
 			WebElement updateButton = Abstract.waitUntilConditionSatisfy(base, RequestProcess.updateButton());
 			updateButton.click();
@@ -611,13 +619,6 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 
 		base.driver.findElement(By.id("sysverb_update")).click();
 		Thread.sleep(5000);
-		
-		} catch (WebDriverException e) {
-			e.printStackTrace();
-			//Method to capture failed Screenshot
-			Abstract.screenshotcapture();
-
-		}
 	}
 
 	@When("^Search Request in a CMDB Table as \"([^\"]*)\"$")
@@ -627,7 +628,7 @@ public class EndToEndDeploymentSteps extends BaseUtil {
 		WebElement searchFilter = Abstract.waitUntilConditionSatisfy(base, FilterNavigation.searchFilter());
 		searchFilter.sendKeys(searchFilterValue);
 		searchFilter.sendKeys(Keys.ENTER);
-		logger.info("Search Request in a CMDB Table as :"+searchFilterValue);
+		logger.info("Search Request in a CMDB Table as :" + searchFilterValue);
 
 	}
 
